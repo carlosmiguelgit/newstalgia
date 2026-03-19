@@ -6866,7 +6866,11 @@ void Player::setSpecialMenuAvailable(bool stashBool, bool marketMenuBool, bool d
 	// Menu option 'show in market'
 	// Menu option to open depot search
 	stashMenuAvailable = stashBool;
-	marketMenu = marketMenuBool;
+	if (g_configManager().getBoolean(ENABLE_MARKET)) {
+		marketMenu = marketMenuBool;
+	} else {
+		marketMenu = false;
+	}
 	depotSearch = depotSearchBool;
 	if (client) {
 		client->sendSpecialContainersAvailable();

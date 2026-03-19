@@ -118,6 +118,11 @@ bool ConfigManager::load() {
 	loadBoolConfig(L, PREY_ENABLED, "preySystemEnabled", true);
 	loadBoolConfig(L, PREY_FREE_THIRD_SLOT, "preyFreeThirdSlot", false);
 	loadBoolConfig(L, PUSH_WHEN_ATTACKING, "pushWhenAttacking", false);
+	loadBoolConfig(L, WALK_THROUGH_PLAYERS, "walkThroughPlayers", true);
+	loadBoolConfig(L, ALLOW_LURE_CREATURES, "allowLureCreatures", true);
+	loadBoolConfig(L, BLOCK_RESPAWN, "blockRespawn", true);
+	loadBoolConfig(L, ENABLE_OFFLINE_TRAINING, "enableOfflineTraining", true);
+	loadBoolConfig(L, ENABLE_MARKET, "enableMarket", true);
 	loadBoolConfig(L, ADVANCED_PARTY_PROTECTION, "advancedPartyProtection", true);
 	loadBoolConfig(L, RATE_USE_STAGES, "rateUseStages", false);
 	loadBoolConfig(L, REFUND_BEGINNING_WEAPON_MANA, "refundBeginningWeaponMana", false);
