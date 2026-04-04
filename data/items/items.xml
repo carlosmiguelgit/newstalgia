@@ -22575,6 +22575,7 @@
 	<item id="8117" article="a" name="theatre script">
 		<attribute key="primarytype" value="quest items" />
 		<attribute key="description" value="It contains the script to a piece performed in the theatre of Carlin" />
+		<attribute key="writeable" value="1" />
 		<attribute key="weight" value="1300" />
 	</item>
 	<item id="8118" article="the" name="remains of a wisp">
