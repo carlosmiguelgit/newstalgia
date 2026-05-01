@@ -23013,6 +23013,8 @@
 		<attribute key="primarytype" value="statues" />
 	</item>
 	<item id="8326" article="a" name="vampire lord">
+		<attribute key="duration" value="10" />
+		<attribute key="decayTo" value="8325" />
 		<attribute key="primarytype" value="animals" />
 	</item>
 	<item fromid="8327" toid="8328" article="a" name="statue" />

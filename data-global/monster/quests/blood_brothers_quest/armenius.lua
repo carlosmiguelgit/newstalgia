@@ -1,4 +1,4 @@
-local mType = Game.createMonsterType("Armenius (Creature)")
+local mType = Game.createMonsterType("Armenius")
 local monster = {}
 
 monster.description = "Armenius"

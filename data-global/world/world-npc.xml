@@ -72,6 +72,9 @@
 	<npc centerx="32790" centery="31237" centerz="3" radius="1">
 		<npc name="Vincent" x="0" y="0" z="3" spawntime="60" />
 	</npc>
+	<npc centerx="32952" centery="31440" centerz="3" radius="1">
+		<npc name="A Fading Memory" x="0" y="0" z="3" spawntime="60" />
+	</npc>	
 	<npc centerx="32992" centery="31471" centerz="3" radius="1">
 		<npc name="Lazaran" x="0" y="0" z="3" spawntime="60" />
 	</npc>
@@ -1208,6 +1211,9 @@
 	</npc>
 	<npc centerx="33891" centery="31474" centerz="7" radius="1">
 		<npc name="Guide Meruka" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32914" centery="31490" centerz="7" radius="1">
+		<npc name="A Wandering Soul" x="0" y="0" z="0" spawntime="60" />
 	</npc>
 	<npc centerx="33919" centery="31492" centerz="7" radius="1">
 		<npc name="Guard Saros" x="0" y="0" z="7" spawntime="60" />

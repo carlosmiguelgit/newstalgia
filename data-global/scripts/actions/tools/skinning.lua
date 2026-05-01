@@ -118,6 +118,24 @@ local config = {
 local skinning = Action()
 
 function skinning.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	-- Blood Brother Quest
+	if target.itemid == 8109 and item.itemid == 5942 then
+		local missionItems = {
+			[Storage.Quest.U8_4.BloodBrothers.Mission07] = { id = 8717, name = "Boreth", next = Storage.Quest.U8_4.BloodBrothers.Mission08 },
+			[Storage.Quest.U8_4.BloodBrothers.Mission08] = { id = 8718, name = "Lersatio", next = Storage.Quest.U8_4.BloodBrothers.Mission09 },
+			[Storage.Quest.U8_4.BloodBrothers.Mission09] = { id = 8719, name = "Marziel", next = Storage.Quest.U8_4.BloodBrothers.Mission10 },
+			[Storage.Quest.U8_4.BloodBrothers.Mission10] = { id = 8720, name = "Arthei", next = nil },
+		}
+		for storage, info in pairs(missionItems) do
+			if player:getStorageValue(storage) == 1 and (info.next == nil or player:getStorageValue(info.next) < 1) then
+				player:addItem(info.id, 1)
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You got some ounces of " .. info.name .. "'s dust. This should be enough proof that you killed him.")
+				target:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
+				return true
+			end
+		end
+	end
+
 	local topItem = false
 	local skin = config[item.itemid][target.itemid]
 	local tile = Tile(toPosition)

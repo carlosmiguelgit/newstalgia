@@ -189,6 +189,8 @@ function playerLoginGlobal.onLogin(player)
 	player:saveLoginLog()
 
 	player:initializeLoyaltySystem()
+	player:registerEvent("Castlemania")
+	player:registerEvent("PartyProtection")
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
 	player:registerEvent("BossParticipation")

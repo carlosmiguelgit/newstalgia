@@ -6290,7 +6290,7 @@ if not Quests then
 		},
 		[46] = {
 			name = "Blood Brothers",
-			startStorageId = Storage.Quest.U8_4.BloodBrothers.QuestLine,
+			startStorageId = Storage.Quest.U8_4.BloodBrothers.Trust,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
@@ -6300,10 +6300,10 @@ if not Quests then
 					startValue = 1,
 					endValue = 4,
 					states = {
-						[1] = "Think of a way to earn Julius' trust and prove that you are not a vampire. Once you thought of something, talk to him again about your mission.",
+						[1] = "Think of a way to earn Julius' trust and prove that you are not a vampire. Once you have thought of something, talk to him again about your mission.",
 						[2] = "Julius wants more proof. He asked if you have ever baked garlic bread. Confirm whether you know how to bake it.",
-						[3] = "Bake a garlic bread using holy water on flour, then use the dough on garlic, and bake it. Bring it back to Julius and eat it in front of him.",
-						[4] = "You have Julius' trust.",
+						[3] = "Bake a garlic bread by using holy water on flour, then use the dough on garlic, and bake it in an oven. Bring it back to Julius and eat it in front of him.",
+						[4] = "You have earned Julius' trust.",
 					},
 				},
 				[2] = {
@@ -6313,8 +6313,8 @@ if not Quests then
 					startValue = 1,
 					endValue = 2,
 					states = {
-						[1] = "Bake garlic cookies by using the garlic dough on a baking tray before you put it on the oven. Hand out cookies to the citizens and watch their reactions. Report any suspicious people to Julius.",
-						[2] = "You have reported five suspects - probably vampires - to Julius.",
+						[1] = "Bake garlic cookies by using the garlic dough on a baking tray before putting it in the oven. Hand out cookies to the citizens and watch their reactions. Report any suspicious people to Julius.",
+						[2] = "You have reported five suspects — probably vampires — to Julius.",
 					},
 				},
 				[3] = {
@@ -6324,8 +6324,8 @@ if not Quests then
 					startValue = 1,
 					endValue = 3,
 					states = {
-						[1] = "Use the magic words 'alori mort' in front of the suspicious citizens you discovered to hopefully reveal who among them is their leader.",
-						[2] = "You used the spell on the five suspects. Report your findings to Julius.",
+						[1] = "Use the magic words 'alori mort' in front of the five suspicious citizens to reveal who among them is their leader.",
+						[2] = "You used the spell on all five suspects. Report your findings to Julius.",
 						[3] = "You reported the incident with Armenius to Julius.",
 					},
 				},
@@ -6336,12 +6336,12 @@ if not Quests then
 					startValue = 1,
 					endValue = 2,
 					states = {
-						[1] = "Your task is to find someone to bring you to Vengoth. Explore the island and use Julius' map whenever you find an unusual spot to mark it. Mark at least 5 spots including the castle and report back.",
+						[1] = "Find someone to bring you to Vengoth. Explore the island and use Julius' map whenever you find an unusual spot to mark it. Mark at least 5 spots including the castle and report back to Julius.",
 						[2] = "You have successfully mapped Vengoth and reported back to Julius.",
 					},
 				},
 				[5] = {
-					name = "Mission 05: Inside the Castle",
+					name = "Mission 05: Into the Castle",
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission05,
 					missionId = 10467,
 					startValue = 1,
@@ -6349,18 +6349,19 @@ if not Quests then
 					states = {
 						[1] = "Find a blood crystal somewhere in Yalahar. Ask around to find out where you could get one.",
 						[2] = "Charge the blood crystal by finding someone who has lost something or someone dear to them. Their grief emits powerful energy.",
-						[3] = "Gather three more adventurers with charged blood crystals. Stand together on the symbols around Vengoth castle to attune yourselves and pass the gate.",
-						[4] = "You entered the castle but were blocked by invulnerable ghosts. Search for documents or books inside that reveal the history of the castle and its master.",
+						[3] = "Gather three more adventurers with charged blood crystals. Stand together on the four symbols around Vengoth castle to attune yourselves and unlock the gate. Report back to Julius.",
+						[4] = "You entered the castle but were blocked by invulnerable ghosts. Search for documents and books inside that reveal the history of the castle and its masters.",
 					},
 				},
 				[6] = {
-					name = "Mission 06: A Dark History",
+					name = "Mission 06: A Black History",
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission06,
 					missionId = 10468,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Explore the castle further. Look for hidden passages and find the first of the four vampire brothers: Boreth.",
+						[1] = "Explore the castle further. Search for hidden passages and look for documents or books that reveal the dark history of the castle and its masters.",
+						[2] = "You have uncovered the black history of the vampire brothers. Report your findings to Julius and explore deeper to find Boreth, the first of the four brothers.",
 					},
 				},
 				[7] = {
@@ -6368,9 +6369,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission07,
 					missionId = 10469,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Defeat Lersatio, the second vampire brother, in another tower of the castle. Bring Julius proof of his death.",
+						[1] = "Find Boreth, the first of the four vampire brothers, hidden somewhere in the castle. Defeat him and bring Julius proof of his death.",
+						[2] = "You have defeated Boreth, the first of the four vampire brothers.",
 					},
 				},
 				[8] = {
@@ -6378,9 +6380,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission08,
 					missionId = 10470,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Defeat Marziel, the third vampire brother. Find access to his tower and bring Julius proof of his death.",
+						[1] = "Defeat Lersatio, the second vampire brother. He lurks in another tower of the castle. Use his mirrors to shatter them and lure him out. Bring Julius proof of his death.",
+						[2] = "You have defeated Lersatio, the second vampire brother.",
 					},
 				},
 				[9] = {
@@ -6388,9 +6391,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission09,
 					missionId = 10471,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Defeat Arthei, the master vampire and fourth brother. Bring Julius proof of his death to complete your task.",
+						[1] = "Defeat Marziel, the third vampire brother. Find access to his tower. A female character must step onto the throne carrying a vial of blood to awaken him. Bring Julius proof of his death.",
+						[2] = "You have defeated Marziel, the third vampire brother.",
 					},
 				},
 				[10] = {
@@ -6398,9 +6402,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_4.BloodBrothers.Mission10,
 					missionId = 10472,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "You have defeated all four vampire brothers and freed Yalahar from their curse. Julius rewarded you with a special crest.",
+						[1] = "Defeat Arthei, the master vampire brother. Find him in the deepest part of the castle and bring Julius proof of his death.",
+						[2] = "You have defeated all four vampire brothers and freed Yalahar from their curse. Julius rewarded you with a special crest.",
 					},
 				},
 			},
