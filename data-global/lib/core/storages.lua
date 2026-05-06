@@ -2852,6 +2852,13 @@ Storage = {
 				RascacoonShortcut = 47512,
 				TentuglyKilled = 47513,
 				TentuglyDoor = 47514,
+				Tentugly = {
+					Room = 47515,
+					Timer = 47516,
+				},
+				BathTub = 47517,
+				RatmiralKilled = 47518,
+				WaterIcon = 47519,
 			},
 			RascoohanOutfits = {},
 		},

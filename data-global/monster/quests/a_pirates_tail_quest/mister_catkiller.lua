@@ -1,24 +1,28 @@
-local mType = Game.createMonsterType("Elite Pirat")
+local mType = Game.createMonsterType("Mister Catkiller")
 local monster = {}
 
-monster.description = "an elite pirat"
-monster.experience = 18000
+monster.description = "Mister Catkiller"
+monster.experience = 0
 monster.outfit = {
 	lookType = 534,
-	lookHead = 79,
-	lookBody = 79,
-	lookLegs = 94,
-	lookFeet = 0,
-	lookAddons = 0,
+	lookHead = 95,
+	lookBody = 94,
+	lookLegs = 79,
+	lookFeet = 115,
+	lookAddons = 3,
 	lookMount = 0,
 }
 
-monster.health = 20000
-monster.maxHealth = 20000
+monster.health = 50000
+monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 17446
+monster.corpse = 0
 monster.speed = 100
 monster.manaCost = 0
+
+monster.events = {
+	"catkillerHealth",
+}
 
 monster.changeTarget = {
 	interval = 4000,
@@ -42,9 +46,9 @@ monster.flags = {
 	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
-	staticAttackChance = 90,
+	staticAttackChance = 70,
 	targetDistance = 1,
-	runHealth = 0,
+	runHealth = 50,
 	healthHidden = false,
 	isBlockable = true,
 	canWalkOnEnergy = true,
@@ -62,31 +66,19 @@ monster.voices = {
 	chance = 10,
 }
 
-monster.loot = {
-	{ id = 3031, chance = 100000, maxCount = 120 }, -- gold coin
-	{ id = 7642, chance = 100000, maxCount = 2 }, -- great spirit potion
-	{ id = 35572, chance = 10000 }, -- pirate coin
-	{ id = 813, chance = 4761 }, -- terra boots
-	{ id = 813, chance = 4761 }, -- terra boots
-	{ id = 17812, chance = 5000 }, -- ratana
-	{ id = 17813, chance = 5000 }, -- life preserver
-	{ id = 17817, chance = 16666 }, -- cheese cutter
-	{ id = 17818, chance = 3846 }, -- cheesy figurine
-	{ id = 35596, chance = 11111 }, -- mouldy powder
-	{ id = 17820, chance = 14285 }, -- soft cheese
-	{ id = 17821, chance = 14285 }, -- rat cheese
-	{ id = 820, chance = 1612 }, -- lightning boots
-	{ id = 818, chance = 3225 }, -- magma boots
-}
+monster.loot = {}
+
+monster.summon = {}
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 400, maxDamage = -210 },
-	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 80, maxDamage = -110, range = 7, shootEffect = CONST_ANI_WHIRLWINDCLUB, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -600 },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -400, maxDamage = -1000, radius = 5, effect = CONST_ME_HITBYPOISON, target = false },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -300, range = 1, effect = CONST_ME_SMALLCLOUDS, target = true },
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 15,
+	defense = 65,
+	armor = 65,
 	--	mitigation = ???,
 }
 
@@ -95,7 +87,7 @@ monster.elements = {
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
-	{ type = COMBAT_LIFEDRAIN, percent = 100 },
+	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
