@@ -2966,6 +2966,16 @@ Storage = {
 				Bloodbath = 48006,
 			},
 		},
+		U15_12 = { -- update 15.12 - Reserved Storages 48031 - 48040
+			newhavenCitizen = 48031,
+			newhavenTutorialHunting = 48032,
+			newhavenNewLootTheCorruptor = 48033,
+			newhavenGoblinQuestStart = 48034,
+			newhavenGoblinQuestDone = 48035,
+			newhavenMuglexKillCount = 48036,
+			newhavenViolaBookQuestStart = 48037,
+			newhavenViolaBookQuestDone = 48038,
+		},
 	},
 
 	-- Reserved storage from 63951 - 63999
