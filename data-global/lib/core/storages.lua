@@ -3066,6 +3066,7 @@ GlobalStorage = {
 			DarashiaNorth = 60192,
 			DarashiaWest = 60193,
 		},
+		ThawingMiniWorldChange = 67000,
 	},
 	TheDreamCourts = {
 		-- Reserved storage from 60194 - 60196

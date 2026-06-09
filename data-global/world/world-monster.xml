@@ -113959,18 +113959,15 @@
 		<monster name="Humongous Fungus" x="1" y="1" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33225" centery="31972" centerz="10" radius="3">
-		<monster name="Dryad" x="-2" y="-1" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-1" y="3" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33232" centery="31972" centerz="10" radius="3">
 		<monster name="Deer" x="0" y="-3" z="10" spawntime="60" />
 		<monster name="Emerald Damselfly" x="3" y="-3" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-3" y="3" z="10" spawntime="60" />
-		<monster name="Dryad" x="1" y="3" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33246" centery="31972" centerz="10" radius="3">
 		<monster name="Emerald Damselfly" x="0" y="-2" z="10" spawntime="60" />
-		<monster name="Dryad" x="-1" y="0" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="3" y="3" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33260" centery="31972" centerz="10" radius="3">
@@ -114091,13 +114088,10 @@
 		<monster name="Armadile" x="0" y="1" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33155" centery="31979" centerz="10" radius="3">
-		<monster name="Dryad" x="-2" y="2" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-1" y="2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33183" centery="31979" centerz="10" radius="3">
-		<monster name="Dryad" x="-3" y="-1" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-1" y="2" z="10" spawntime="60" />
-		<monster name="Dryad" x="1" y="2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33232" centery="31979" centerz="10" radius="3">
 		<monster name="Haunted Treeling" x="1" y="-2" z="10" spawntime="60" />
@@ -114167,17 +114161,14 @@
 		<monster name="Dwarf Soldier" x="1" y="3" z="10" spawntime="90" />
 	</monster>
 	<monster centerx="33148" centery="31986" centerz="10" radius="3">
-		<monster name="Dryad" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Forest Fury" x="1" y="-1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33155" centery="31986" centerz="10" radius="3">
-		<monster name="Dryad" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="3" y="-1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33176" centery="31986" centerz="10" radius="3">
 		<monster name="Haunted Treeling" x="-1" y="-3" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="2" y="-2" z="10" spawntime="60" />
-		<monster name="Dryad" x="0" y="-1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33190" centery="31986" centerz="10" radius="3">
 		<monster name="Wilting Leaf Golem" x="0" y="3" z="10" spawntime="60" />
@@ -114435,13 +114426,10 @@
 		<monster name="Haunted Treeling" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="2" y="-1" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-2" y="1" z="10" spawntime="60" />
-		<monster name="Dryad" x="0" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33176" centery="32007" centerz="10" radius="3">
-		<monster name="Dryad" x="-2" y="-2" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="0" y="-2" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="-3" y="-1" z="10" spawntime="60" />
-		<monster name="Dryad" x="-2" y="1" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-3" y="2" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="-3" y="3" z="10" spawntime="60" />
 	</monster>
@@ -114449,7 +114437,6 @@
 		<monster name="Haunted Treeling" x="-3" y="2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33232" centery="32007" centerz="10" radius="3">
-		<monster name="Dryad" x="0" y="-2" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="3" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33260" centery="32007" centerz="10" radius="3">
@@ -114574,7 +114561,6 @@
 		<monster name="Marsh Stalker" x="2" y="-2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33218" centery="32014" centerz="10" radius="3">
-		<monster name="Dryad" x="-1" y="0" z="10" spawntime="60" />
 		<monster name="Emerald Damselfly" x="-3" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33239" centery="32014" centerz="10" radius="3">
@@ -114669,7 +114655,6 @@
 		<monster name="Forest Fury" x="3" y="-1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33246" centery="32021" centerz="10" radius="3">
-		<monster name="Dryad" x="1" y="-1" z="10" spawntime="60" />
 		<monster name="Forest Fury" x="3" y="-1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33253" centery="32021" centerz="10" radius="3">
@@ -114814,9 +114799,7 @@
 		<monster name="Forest Fury" x="2" y="-2" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33246" centery="32028" centerz="10" radius="3">
-		<monster name="Dryad" x="-3" y="-2" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-1" y="3" z="10" spawntime="60" />
-		<monster name="Dryad" x="1" y="3" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33253" centery="32028" centerz="10" radius="3">
 		<monster name="Forest Fury" x="1" y="1" z="10" spawntime="60" />
@@ -115035,7 +115018,6 @@
 		<monster name="Haunted Treeling" x="2" y="-3" z="10" spawntime="60" />
 		<monster name="Haunted Treeling" x="-1" y="-2" z="10" spawntime="60" />
 		<monster name="Wilting Leaf Golem" x="-3" y="-1" z="10" spawntime="60" />
-		<monster name="Dryad" x="-1" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33253" centery="32042" centerz="10" radius="3">
 		<monster name="Wilting Leaf Golem" x="3" y="-2" z="10" spawntime="60" />
@@ -115122,12 +115104,9 @@
 	</monster>
 	<monster centerx="33176" centery="32049" centerz="10" radius="3">
 		<monster name="Haunted Treeling" x="1" y="-2" z="10" spawntime="60" />
-		<monster name="Dryad" x="-3" y="1" z="10" spawntime="54784" />
-		<monster name="Dryad" x="-2" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33197" centery="32049" centerz="10" radius="3">
 		<monster name="Wilting Leaf Golem" x="0" y="0" z="10" spawntime="60" />
-		<monster name="Dryad" x="2" y="0" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33204" centery="32049" centerz="10" radius="3">
 		<monster name="Forest Fury" x="-2" y="0" z="10" spawntime="60" />
@@ -115137,7 +115116,6 @@
 	</monster>
 	<monster centerx="33218" centery="32049" centerz="10" radius="3">
 		<monster name="Haunted Treeling" x="0" y="-1" z="10" spawntime="60" />
-		<monster name="Dryad" x="1" y="1" z="10" spawntime="60" />
 	</monster>
 	<monster centerx="33246" centery="32049" centerz="10" radius="3">
 		<monster name="Haunted Treeling" x="0" y="-1" z="10" spawntime="60" />
