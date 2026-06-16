@@ -378,9 +378,6 @@
 	<npc centerx="33618" centery="32372" centerz="5" radius="1">
 		<npc name="Eruaran" x="0" y="0" z="5" spawntime="60" />
 	</npc>
-	<npc centerx="32422" centery="32481" centerz="5" radius="1">
-		<npc name="Wes the Blacksmith" x="0" y="0" z="5" spawntime="60" />
-	</npc>
 	<npc centerx="32435" centery="32492" centerz="5" radius="1">
 		<npc name="Dal the Huntress" x="0" y="0" z="5" spawntime="60" />
 	</npc>
@@ -863,9 +860,6 @@
 	</npc>
 	<npc centerx="32390" centery="32459" centerz="6" radius="1">
 		<npc name="Jehan the Baker" x="0" y="0" z="6" spawntime="60" />
-	</npc>
-	<npc centerx="32374" centery="32467" centerz="6" radius="1">
-		<npc name="Wes the Blacksmith" x="0" y="0" z="6" spawntime="60" />
 	</npc>
 	<npc centerx="32406" centery="32471" centerz="6" radius="1">
 		<npc name="Lesh the Seer" x="0" y="0" z="6" spawntime="60" />
