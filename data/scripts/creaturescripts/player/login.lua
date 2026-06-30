@@ -195,6 +195,8 @@ function playerLoginGlobal.onLogin(player)
 	player:registerEvent("DropLoot")
 	player:registerEvent("BossParticipation")
 	player:registerEvent("UpdatePlayerOnAdvancedLevel")
+	player:registerEvent("RottenTaintGain")
+	player:registerEvent("BakragorePlayerDeath")
 	return true
 end
 

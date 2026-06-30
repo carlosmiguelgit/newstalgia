@@ -75168,6 +75168,18 @@
 	<item id="43374" name="vine">
 		<attribute key="type" value="ladder" />
 	</item>
+	<item id="43501" article="a" name="the essence of Murcion">
+		<attribute key="description" value="This is the rotten essence of Murcion. It can be consumed to imbue yourself with it." />
+	</item>
+	<item id="43502" article="a" name="the essence of Ichgahal">
+		<attribute key="description" value="This is the rotten essence of Ichgahal. It can be consumed to imbue yourself with it." />
+	</item>
+	<item id="43503" article="a" name="the essence of Vemiath">
+		<attribute key="description" value="This is the rotten essence of Vemiath. It can be consumed to imbue yourself with it." />
+	</item>
+	<item id="43504" article="a" name="the essence of Chagorz">
+		<attribute key="description" value="This is the rotten essence of Chagorz. It can be consumed to imbue yourself with it." />
+	</item>
 	<item id="43510" name="tibiora's box">
 		<attribute key="description" value="Souvenir from Thais Museum." />
 		<attribute key="weight" value="4200" />
@@ -75437,6 +75449,10 @@
 			<attribute key="slot" value="ammo" />
 		</attribute>
 	</item>
+	<item id="43744" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
 	<item id="43751" article="a" name="dead werecrocodile">
 		<attribute key="decayTo" value="0" />
 		<attribute key="duration" value="60" />
@@ -75505,6 +75521,77 @@
 		<attribute key="decayTo" value="43766" />
 		<attribute key="duration" value="10" />
 		<attribute key="fluidSource" value="blood" />
+	</item>
+<item id="43786" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43787" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43788" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43789" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43790" article="a" name="rotten mushroom">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<!-- Rotten Blood Crystals -->
+	<item id="43792" article="a" name="rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43793" article="a" name="broken rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+		<attribute key="decayTo" value="43792" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="43794" article="a" name="rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43795" article="a" name="broken rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+		<attribute key="decayTo" value="43794" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="43796" article="a" name="rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43797" article="a" name="broken rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+		<attribute key="decayTo" value="43796" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="43798" article="a" name="rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43799" article="a" name="broken rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+		<attribute key="decayTo" value="43798" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="43800" article="a" name="rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43801" article="a" name="broken rotten crystal">
+		<attribute key="primarytype" value="quest items" />
+		<attribute key="weight" value="100" />
+		<attribute key="decayTo" value="43800" />
+		<attribute key="duration" value="3" />
 	</item>
 	<item id="43810" article="a" name="large seashell" />
 	<item id="43811" article="a" name="large seashell">
@@ -75719,6 +75806,14 @@
 	</item>
 	<item id="43853" article="a" name="darklight core">
 		<attribute key="loottype" value="creature products" />
+		<attribute key="primarytype" value="creature products" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43854" article="a" name="tainted heart" plural="tainted hearts">
+		<attribute key="primarytype" value="creature products" />
+		<attribute key="weight" value="100" />
+	</item>
+	<item id="43855" article="a" name="darklight heart" plural="darklight hearts">
 		<attribute key="primarytype" value="creature products" />
 		<attribute key="weight" value="100" />
 	</item>
