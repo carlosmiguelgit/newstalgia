@@ -75138,7 +75138,6 @@
 	<item id="43134" name="stairs">
 		<attribute key="floorchange" value="south" />
 	</item>
-	<item fromid="43786" toid="43790" name="spore reservoir"/>
 	<item id="43294" article="a" name="spore tracks" >
 		<attribute key="primarytype" value="magicfield"/>
 		<attribute key="duration" value="3"/>
@@ -75522,7 +75521,7 @@
 		<attribute key="duration" value="10" />
 		<attribute key="fluidSource" value="blood" />
 	</item>
-<item id="43786" article="a" name="rotten mushroom">
+	<item id="43786" article="a" name="rotten mushroom">
 		<attribute key="primarytype" value="quest items" />
 		<attribute key="weight" value="100" />
 	</item>
