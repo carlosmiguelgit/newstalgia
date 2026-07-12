@@ -1152,11 +1152,12 @@ std::shared_ptr<Player> Game::getPlayerByGUID(const uint32_t &guid, bool allowOf
 	if (guid == 0) {
 		return nullptr;
 	}
-	for (const auto &it : players) {
-		if (guid == it.second->getGUID()) {
-			return it.second;
-		}
+
+	auto it = playersByGUID.find(guid);
+	if (it != playersByGUID.end()) {
+		return it->second;
 	}
+
 	if (!allowOffline) {
 		return nullptr;
 	}
@@ -11282,6 +11283,7 @@ void Game::addPlayer(const std::shared_ptr<Player> &player) {
 	mappedPlayerNames[lowercase_name] = player;
 	wildcardTree->insert(lowercase_name);
 	players[player->getID()] = player;
+	playersByGUID[player->getGUID()] = player;
 }
 
 void Game::removePlayer(const std::shared_ptr<Player> &player) {
@@ -11289,6 +11291,7 @@ void Game::removePlayer(const std::shared_ptr<Player> &player) {
 	mappedPlayerNames.erase(lowercase_name);
 	wildcardTree->remove(lowercase_name);
 	players.erase(player->getID());
+	playersByGUID.erase(player->getGUID());
 }
 
 void Game::addNpc(const std::shared_ptr<Npc> &npc) {
