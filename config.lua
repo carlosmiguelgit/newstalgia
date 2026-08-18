@@ -489,8 +489,8 @@ maxMarketOffersAtATimePerPlayer = 100
 -- 1 — equivalent to the old single-connection behavior
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
-mysqlPass = "root"
-mysqlDatabase = "crystalserver"
+mysqlPass = ""
+mysqlDatabase = "newstalgia"
 mysqlPort = 3306
 mysqlSock = ""
 passwordType = "sha1"
