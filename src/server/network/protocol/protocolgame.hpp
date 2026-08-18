@@ -182,6 +182,7 @@ private:
 
 	void sendItemInspection(uint16_t itemId, uint8_t itemCount, const std::shared_ptr<Item> &item, uint8_t inspectionType);
 	void parseInspectionObject(NetworkMessage &msg);
+	void parseInspectionCharacter(NetworkMessage &msg);
 
 	void parseFriendSystemAction(NetworkMessage &msg);
 
@@ -373,7 +374,7 @@ private:
 	void sendCyclopediaCharacterItemSummary(const ItemsTierCountList &inventoryItems, const ItemsTierCountList &storeInboxItems, const StashItemList &stashItems, const ItemsTierCountList &depotBoxItems, const ItemsTierCountList &inboxItems);
 	void sendCyclopediaCharacterOutfitsMounts();
 	void sendCyclopediaCharacterStoreSummary();
-	void sendCyclopediaCharacterInspection();
+	void sendCyclopediaCharacterInspection(const std::shared_ptr<Player> &target);
 	void sendCyclopediaCharacterBadges();
 	void sendCyclopediaCharacterTitles();
 	void sendCyclopediaCharacterOffenceStats();

@@ -17,6 +17,8 @@
 
 #include "server/network/protocol/protocolgame.hpp"
 
+#include <fstream>
+
 #include "account/account.hpp"
 #include "config/configmanager.hpp"
 #include "core.hpp"
@@ -1467,6 +1469,9 @@ void ProtocolGame::parsePacketFromDispatcher(NetworkMessage &msg, uint8_t recvby
 		case 0xCD:
 			parseInspectionObject(msg);
 			break;
+		case 0xCE:
+			parseInspectionCharacter(msg);
+			break;
 		case 0xCF:
 			sendBlessingWindow();
 			break;
@@ -2348,6 +2353,16 @@ void ProtocolGame::parseInspectionObject(NetworkMessage &msg) {
 		uint16_t itemCount = msg.getByte();
 		g_game().playerInspectItem(player, itemId, static_cast<int8_t>(itemCount), inspectionType);
 	}
+}
+
+void ProtocolGame::parseInspectionCharacter(NetworkMessage &msg) {
+	if (oldProtocol) {
+		return;
+	}
+
+	uint8_t tab = msg.getByte();
+	uint32_t creatureId = msg.get<uint32_t>();
+	g_game().playerInspectCharacter(player, creatureId, tab);
 }
 
 void ProtocolGame::sendSessionEndInformation(SessionEndInformations information) {
@@ -4501,8 +4516,8 @@ void ProtocolGame::sendCyclopediaCharacterStoreSummary() {
 	writeToOutputBuffer(msg);
 }
 
-void ProtocolGame::sendCyclopediaCharacterInspection() {
-	if (!player || oldProtocol) {
+void ProtocolGame::sendCyclopediaCharacterInspection(const std::shared_ptr<Player> &target) {
+	if (!player || !target || oldProtocol) {
 		return;
 	}
 
@@ -4514,7 +4529,7 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 	auto startInventory = msg.getBufferPosition();
 	msg.skipBytes(1);
 	for (std::underlying_type<Slots_t>::type slot = CONST_SLOT_FIRST; slot <= CONST_SLOT_LAST; slot++) {
-		std::shared_ptr<Item> inventoryItem = player->getInventoryItem(static_cast<Slots_t>(slot));
+		std::shared_ptr<Item> inventoryItem = target->getInventoryItem(static_cast<Slots_t>(slot));
 		if (inventoryItem) {
 			++inventoryItems;
 
@@ -4548,8 +4563,8 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 			}
 		}
 	}
-	msg.addString(player->getName());
-	AddOutfit(msg, player->getDefaultOutfit(), false);
+	msg.addString(target->getName());
+	AddOutfit(msg, target->getDefaultOutfit(), false);
 
 	// Player overall summary
 	uint8_t playerDescriptionSize = 0;
@@ -4557,31 +4572,31 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 	msg.skipBytes(1);
 
 	// Player title
-	if (player->title()->getCurrentTitle() != 0) {
+	if (target->title()->getCurrentTitle() != 0) {
 		playerDescriptionSize++;
 		msg.addString("Character Title");
-		msg.addString(player->title()->getCurrentTitleName());
+		msg.addString(target->title()->getCurrentTitleName());
 	}
 
 	// Level description
 	playerDescriptionSize++;
 	msg.addString("Level");
-	msg.addString(std::to_string(player->getLevel()));
+	msg.addString(std::to_string(target->getLevel()));
 
 	// Vocation description
 	playerDescriptionSize++;
 	msg.addString("Vocation");
-	msg.addString(player->getVocation()->getVocName());
+	msg.addString(target->getVocation()->getVocName());
 
 	// Loyalty title
-	if (!player->getLoyaltyTitle().empty()) {
+	if (!target->getLoyaltyTitle().empty()) {
 		playerDescriptionSize++;
 		msg.addString("Loyalty Title");
-		msg.addString(player->getLoyaltyTitle());
+		msg.addString(target->getLoyaltyTitle());
 	}
 
 	// Marriage description
-	if (const auto spouseId = player->getMarriageSpouse(); spouseId > 0) {
+	if (const auto spouseId = target->getMarriageSpouse(); spouseId > 0) {
 		if (const auto &spouse = g_game().getPlayerByID(spouseId, true); spouse) {
 			playerDescriptionSize++;
 			msg.addString("Married to");
@@ -4591,7 +4606,7 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 
 	// Prey description
 	for (uint8_t slotId = PreySlot_First; slotId <= PreySlot_Last; slotId++) {
-		if (const auto &slot = player->getPreySlotById(static_cast<PreySlot_t>(slotId));
+		if (const auto &slot = target->getPreySlotById(static_cast<PreySlot_t>(slotId));
 		    slot && slot->isOccupied()) {
 			playerDescriptionSize++;
 			std::string activePrey = fmt::format("Active Prey {}", slotId + 1);
@@ -4624,7 +4639,7 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 	// Outfit description
 	playerDescriptionSize++;
 	msg.addString("Outfit");
-	if (const auto outfit = Outfits::getInstance().getOutfitByLookType(player, player->getDefaultOutfit().lookType)) {
+	if (const auto outfit = Outfits::getInstance().getOutfitByLookType(target, target->getDefaultOutfit().lookType)) {
 		msg.addString(outfit->name);
 	} else {
 		msg.addString("unknown");
@@ -4635,6 +4650,22 @@ void ProtocolGame::sendCyclopediaCharacterInspection() {
 
 	msg.setBufferPosition(playerDescriptionPosition);
 	msg.addByte(playerDescriptionSize);
+
+	std::ofstream debugFile("inspect_dump.txt", std::ios::app);
+	if (debugFile.is_open()) {
+		auto *raw = msg.getBuffer();
+		auto totalLen = msg.getLength();
+		debugFile << "LEN=" << totalLen << " POS=" << msg.getBufferPosition() << "\n";
+		for (size_t i = 7; i < totalLen; i++) {
+			debugFile << "0123456789ABCDEF"[raw[i] >> 4] << "0123456789ABCDEF"[raw[i] & 0xF] << " ";
+		}
+		debugFile << "\nTAIL";
+		for (size_t i = totalLen; i < totalLen + 32 && i < 4096; i++) {
+			debugFile << " " << "0123456789ABCDEF"[raw[i] >> 4] << "0123456789ABCDEF"[raw[i] & 0xF];
+		}
+		debugFile << "\n\n";
+		debugFile.close();
+	}
 
 	writeToOutputBuffer(msg);
 }

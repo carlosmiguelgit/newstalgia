@@ -8351,9 +8351,15 @@ void Player::sendCyclopediaCharacterStoreSummary() const {
 	}
 }
 
-void Player::sendCyclopediaCharacterInspection() const {
+void Player::sendCyclopediaCharacterInspection() {
 	if (client) {
-		client->sendCyclopediaCharacterInspection();
+		client->sendCyclopediaCharacterInspection(std::static_pointer_cast<Player>(shared_from_this()));
+	}
+}
+
+void Player::sendCyclopediaCharacterInspection(const std::shared_ptr<Player> &target) {
+	if (client) {
+		client->sendCyclopediaCharacterInspection(target);
 	}
 }
 

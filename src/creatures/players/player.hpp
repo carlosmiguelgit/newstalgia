@@ -1157,7 +1157,8 @@ public:
 	void sendCyclopediaCharacterItemSummary(const ItemsTierCountList &inventoryItems, const ItemsTierCountList &storeInboxItems, const StashItemList &stashItems, const ItemsTierCountList &depotBoxItems, const ItemsTierCountList &inboxItems) const;
 	void sendCyclopediaCharacterOutfitsMounts() const;
 	void sendCyclopediaCharacterStoreSummary() const;
-	void sendCyclopediaCharacterInspection() const;
+	void sendCyclopediaCharacterInspection();
+	void sendCyclopediaCharacterInspection(const std::shared_ptr<Player> &target);
 	void sendCyclopediaCharacterBadges() const;
 	void sendCyclopediaCharacterTitles() const;
 	void sendCyclopediaCharacterOffenceStats() const;

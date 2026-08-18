@@ -1485,6 +1485,26 @@ void Game::playerInspectItem(const std::shared_ptr<Player> &player, uint16_t ite
 	player->sendItemInspection(itemId, itemCount, nullptr, inspectionType);
 }
 
+void Game::playerInspectCharacter(const std::shared_ptr<Player> &player, uint32_t creatureId, uint8_t tab) {
+	metrics::method_latency measure(__METRICS_METHOD_NAME__);
+	if (!player) {
+		return;
+	}
+
+	if (tab != 4) { // INSPECT_CREATURE
+		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
+		return;
+	}
+
+	const auto &target = getPlayerByID(creatureId);
+	if (!target) {
+		player->sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
+		return;
+	}
+
+	player->sendCyclopediaCharacterInspection(target);
+}
+
 FILELOADER_ERRORS Game::loadAppearanceProtobuf(const std::string &file) {
 	using namespace Crystal::protobuf::appearances;
 
@@ -9920,11 +9940,6 @@ void Game::playerSoulSealsFight(uint32_t playerId, uint16_t raceId) {
 void Game::playerOpenBountyTask(uint32_t playerId) {
 	const auto &player = getPlayerByID(playerId);
 	if (!player) {
-		return;
-	}
-
-	if (player->getPlayerVocationEnum() == Vocation_t::VOCATION_NONE) {
-		player->sendMessageDialog("Bounty Tasks are not available in Rookgaard.");
 		return;
 	}
 
