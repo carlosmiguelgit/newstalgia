@@ -1071,6 +1071,19 @@ void ProtocolGame::disconnectClient(const std::string &message, DisconnectClient
 }
 
 void ProtocolGame::writeToOutputBuffer(NetworkMessage &msg) {
+	auto *dbgRaw = msg.getBuffer();
+	auto dbgLen = msg.getLength();
+	if (dbgLen >= 2 && dbgRaw[NetworkMessage::INITIAL_BUFFER_POSITION] == 0xDA) {
+		std::ofstream dbgFile("da_dump.txt", std::ios::app);
+		if (dbgFile.is_open()) {
+			dbgFile << "LEN=" << dbgLen << " TYPE=" << static_cast<int>(dbgRaw[NetworkMessage::INITIAL_BUFFER_POSITION + 1]) << "\n";
+			for (size_t i = NetworkMessage::INITIAL_BUFFER_POSITION; i < NetworkMessage::INITIAL_BUFFER_POSITION + dbgLen; i++) {
+				dbgFile << "0123456789ABCDEF"[dbgRaw[i] >> 4] << "0123456789ABCDEF"[dbgRaw[i] & 0xF] << " ";
+			}
+			dbgFile << "\n\n";
+			dbgFile.close();
+		}
+	}
 	g_dispatcher().safeCall([self = getThis(), msg = std::move(msg)] {
 		self->getOutputBuffer(msg.getLength())->append(msg);
 	});
@@ -4656,11 +4669,11 @@ void ProtocolGame::sendCyclopediaCharacterInspection(const std::shared_ptr<Playe
 		auto *raw = msg.getBuffer();
 		auto totalLen = msg.getLength();
 		debugFile << "LEN=" << totalLen << " POS=" << msg.getBufferPosition() << "\n";
-		for (size_t i = 7; i < totalLen; i++) {
+		for (size_t i = NetworkMessage::INITIAL_BUFFER_POSITION; i < NetworkMessage::INITIAL_BUFFER_POSITION + totalLen; i++) {
 			debugFile << "0123456789ABCDEF"[raw[i] >> 4] << "0123456789ABCDEF"[raw[i] & 0xF] << " ";
 		}
 		debugFile << "\nTAIL";
-		for (size_t i = totalLen; i < totalLen + 32 && i < 4096; i++) {
+		for (size_t i = NetworkMessage::INITIAL_BUFFER_POSITION + totalLen; i < NetworkMessage::INITIAL_BUFFER_POSITION + totalLen + 32 && i < 4096; i++) {
 			debugFile << " " << "0123456789ABCDEF"[raw[i] >> 4] << "0123456789ABCDEF"[raw[i] & 0xF];
 		}
 		debugFile << "\n\n";
