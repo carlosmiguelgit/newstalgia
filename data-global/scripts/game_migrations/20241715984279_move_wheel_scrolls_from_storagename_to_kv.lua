@@ -8,9 +8,11 @@ local promotionScrolls = {
 
 local function migrate(player)
 	for _, scrollTable in ipairs(promotionScrolls) do
-		local oldStorage = player:getStorageValueByName(scrollTable.oldScroll)
-		if oldStorage > 0 then
-			player:kv():scoped("wheel-of-destiny"):scoped("scrolls"):set(scrollTable.newScroll, true)
+		if not player:kv():scoped("wheel-of-destiny"):scoped("scrolls"):get(scrollTable.newScroll) then
+			local oldStorage = player:getStorageValueByName(scrollTable.oldScroll)
+			if oldStorage > 0 then
+				player:kv():scoped("wheel-of-destiny"):scoped("scrolls"):set(scrollTable.newScroll, true)
+			end
 		end
 	end
 end
