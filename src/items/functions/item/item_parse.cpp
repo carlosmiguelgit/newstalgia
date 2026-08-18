@@ -40,6 +40,7 @@ void ItemParse::initParse(const std::string &stringValue, pugi::xml_node attribu
 	ItemParse::parseWrapContainer(stringValue, valueAttribute, itemType);
 	ItemParse::parseWrapableTo(stringValue, valueAttribute, itemType);
 	ItemParse::parseMovable(stringValue, valueAttribute, itemType);
+	ItemParse::parseMultiUse(stringValue, valueAttribute, itemType);
 	ItemParse::parseBlockProjectTile(stringValue, valueAttribute, itemType);
 	ItemParse::parsePickupable(stringValue, valueAttribute, itemType);
 	ItemParse::parseFloorChange(stringValue, valueAttribute, itemType);
@@ -210,6 +211,12 @@ void ItemParse::parseWrapableTo(const std::string &stringValue, pugi::xml_attrib
 void ItemParse::parseMovable(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType) {
 	if (stringValue == "movable") {
 		itemType.movable = valueAttribute.as_bool();
+	}
+}
+
+void ItemParse::parseMultiUse(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType) {
+	if (stringValue == "multiuse") {
+		itemType.multiUse = valueAttribute.as_bool();
 	}
 }
 

@@ -3736,7 +3736,7 @@ int PlayerFunctions::luaPlayerSendTutorial(lua_State* L) {
 }
 
 int PlayerFunctions::luaPlayerOpenImbuementWindow(lua_State* L) {
-	// player:openImbuementWindow(item)
+	// player:openImbuementWindow() or player:openImbuementWindow(item)
 	const auto &player = Lua::getUserdataShared<Player>(L, 1);
 	if (!player) {
 		Lua::reportErrorFunc(Lua::getErrorDesc(LUA_ERROR_PLAYER_NOT_FOUND));
@@ -3744,7 +3744,16 @@ int PlayerFunctions::luaPlayerOpenImbuementWindow(lua_State* L) {
 		return 1;
 	}
 
-	player->openImbuementWindow(IMBUEMENT_WINDOW_CHOICE);
+	std::shared_ptr<Item> item = nullptr;
+	if (lua_gettop(L) >= 2) {
+		item = Lua::getUserdataShared<Item>(L, 2);
+	}
+
+	if (item) {
+		player->openImbuementWindow(IMBUEMENT_WINDOW_SELECT_ITEM, item);
+	} else {
+		player->openImbuementWindow(IMBUEMENT_WINDOW_CHOICE);
+	}
 	return 1;
 }
 

@@ -165,6 +165,7 @@ const phmap::flat_hash_map<std::string, ItemParseAttributes_t> ItemParseAttribut
 	{ "reflectpercentall", ITEM_PARSE_REFLECTPERCENTALL },
 	{ "primarytype", ITEM_PARSE_PRIMARYTYPE },
 	{ "usedbyhouseguests", ITEM_PARSE_USEDBYGUESTS },
+	{ "multiuse", ITEM_PARSE_MULTIUSE },
 	{ "script", ITEM_PARSE_SCRIPT },
 	{ "augments", ITEM_PARSE_AUGMENT },
 	{ "elementalbond", ITEM_PARSE_ELEMENTALBOND },
@@ -290,6 +291,7 @@ private:
 	static void parseWrapContainer(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
 	static void parseWrapableTo(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
 	static void parseMovable(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
+	static void parseMultiUse(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
 	static void parseBlockProjectTile(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
 	static void parsePickupable(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);
 	static void parseFloorChange(const std::string &stringValue, pugi::xml_attribute valueAttribute, ItemType &itemType);

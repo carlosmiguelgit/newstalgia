@@ -48161,6 +48161,7 @@
 	</item>
 	<item fromid="25060" toid="25061" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 	</item>
 	<item id="25062" article="a" name="Pinata Dragon">
 		<attribute key="primarytype" value="party items" />
@@ -48308,15 +48309,18 @@
 	</item>
 	<item fromid="25101" toid="25102" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 	</item>
 	<item id="25103" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25104" />
 		<attribute key="usedbyhouseguests" value="1" />
 	</item>
 	<item id="25104" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25103" />
 		<attribute key="usedbyhouseguests" value="1" />
@@ -48363,24 +48367,28 @@
 	<item fromid="25166" toid="25173" article="a" name="dragon lair wall" />
 	<item id="25174" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25175" />
 		<attribute key="usedbyhouseguests" value="1" />
 	</item>
 	<item id="25175" article="an" name="imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25174" />
 		<attribute key="usedbyhouseguests" value="1" />
 	</item>
 	<item id="25182" article="a" name="gilded imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25183" />
 		<attribute key="usedbyhouseguests" value="1" />
 	</item>
 	<item id="25183" article="a" name="gilded imbuing shrine">
 		<attribute key="primarytype" value="utilities" />
+		<attribute key="multiuse" value="1" />
 		<attribute key="wrapableto" value="23398" />
 		<attribute key="rotateto" value="25182" />
 		<attribute key="usedbyhouseguests" value="1" />
@@ -48454,6 +48462,7 @@
 	<item id="25200" name="unknown item" />
 	<item fromid="25201" toid="25202" article="an" name="abandoned imbuing shrine">
 		<attribute key="primarytype" value="constructions" />
+		<attribute key="multiuse" value="1" />
 	</item>
 	<item fromid="25203" toid="25204" name="RESERVED SPRITE" />
 	<item fromid="25205" toid="25209" name="tapestry of honour">
