@@ -4962,14 +4962,15 @@ void ProtocolGame::sendCyclopediaCharacterDefenceStats() {
 	msg.add<uint16_t>(shieldingSkill);
 	msg.add<uint16_t>(defenseWheel);
 
-	// MitigationStats: client reads exactly 5 doubles (NOT 6 — the type-14 parser is shorter
-	// than type-13 OffenceStats; sending a 6th double desyncs the absorb-count byte -> crash).
+	// MitigationStats: client (15.25) reads exactly 6 doubles here: total, base, equipment,
+	// shielding, wheel, and combat tactics. Sending fewer desyncs the absorb-count byte -> crash.
 	const auto wheelMultiplier = player->wheel()->getMitigationMultiplier();
 	msg.addDouble(player->getMitigation() / 100.);
 	msg.addDouble(0.0);
 	msg.addDouble(player->getDefenseEquipment() / 10000.);
 	msg.addDouble(player->getSkillLevel(SKILL_SHIELD) * player->getVocation()->mitigationFactor / 10000.);
 	msg.addDouble(wheelMultiplier / 100.);
+	msg.addDouble(player->getCombatTacticsMitigation() - 1.0);
 
 	// Store the "combats" to increase in absorb values function and send to client later
 	uint8_t combats = 0;
