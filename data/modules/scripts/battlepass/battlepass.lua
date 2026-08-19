@@ -1,0 +1,1 @@
+dofile(CORE_DIRECTORY .. "/modules/scripts/battlepass/init.lua")

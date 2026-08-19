@@ -97,6 +97,7 @@ bool ConfigManager::load() {
 	loadBoolConfig(L, BLOCK_RESPAWN, "blockRespawn", true);
 	loadBoolConfig(L, BOOSTED_BOSS_SLOT, "boostedBossSlot", true);
 	loadBoolConfig(L, BOUNTY_TASKS_ENABLED, "bountyTasksEnabled", true);
+	loadBoolConfig(L, BATTLEPASS_SYSTEM_ENABLED, "battlePassSystemEnabled", false);
 	loadBoolConfig(L, CHAIN_SYSTEM_VIP_ONLY, "chainSystemVipOnly", false);
 	loadBoolConfig(L, CLASSIC_ATTACK_SPEED, "classicAttackSpeed", false);
 	loadBoolConfig(L, CLEAN_PROTECTION_ZONES, "cleanProtectionZones", false);

@@ -36,6 +36,7 @@ GameStore.OfferTypes = {
 	OFFER_TYPE_ITEM_BED = 26,
 	OFFER_TYPE_ITEM_UNIQUE = 27,
 	OFFER_TYPE_WEEKLYTASKEXPANSION = 28,
+	OFFER_TYPE_BATTLEPASS = 29,
 }
 
 GameStore.SubActions = {
@@ -524,6 +525,8 @@ function parseBuyStoreOffer(playerId, msg)
 			GameStore.processHirelingSkillPurchase(player, offer)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_HIRELING_OUTFIT then
 			GameStore.processHirelingOutfitPurchase(player, offer)
+		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_BATTLEPASS then
+			GameStore.processBattlePassPurchase(player, offer)
 		else
 			-- This should never happen by our convention, but just in case the guarding condition is messed up...
 			error({ code = 0, message = "This offer is unavailable [2]" })
@@ -1643,6 +1646,19 @@ function GameStore.processPremiumPurchase(player, offerId)
 	player:addPremiumDays(offerId - 3000)
 	if configManager.getBoolean(configKeys.VIP_SYSTEM_ENABLED) then
 		player:onAddVip(offerId - 3000)
+	end
+end
+
+function GameStore.processBattlePassPurchase(player)
+	if not BattlePassSystem then
+		return error({ code = 0, message = "Battle Pass system is disabled." })
+	end
+
+	-- The coin charge is handled by makeCoinTransaction after this callback
+	-- returns, so the Battle Pass must not charge coins itself.
+	local errorMessage = BattlePassSystem.purchasePremium(player, true)
+	if errorMessage then
+		return error({ code = 0, message = errorMessage })
 	end
 end
 

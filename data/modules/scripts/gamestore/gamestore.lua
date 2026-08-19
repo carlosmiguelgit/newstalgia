@@ -98,6 +98,23 @@ GameStore.Categories = {
 			},
 		},
 	},
+	-- Battle Pass
+	{
+		icons = { "Category_PremiumTime.png" },
+		name = "Battle Pass",
+		rookgaard = true,
+		state = GameStore.States.STATE_NONE,
+		offers = {
+			{
+				icons = { "Premium_Time_30.png" },
+				name = "Deluxe Battle Pass",
+				price = 250,
+				id = 30250,
+				description = "<i>Unlock the Deluxe Battle Pass rewards for the current season.</i>\n\n&#8226; Deluxe daily mission\n&#8226; Deluxe reward track (one reward per level)\n&#8226; Double Skill and Premium rewards\n\n{character}",
+				type = GameStore.OfferTypes.OFFER_TYPE_BATTLEPASS,
+			},
+		},
+	},
 	-- Consumables
 	{
 		icons = { "Category_Consumables.png" },

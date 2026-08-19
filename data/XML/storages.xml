@@ -30,4 +30,11 @@ When adding a new range or storage, make sure that the ranges do not overlap, an
 		<storage name="wheel.scroll.extended" key="4" />
 		<storage name="wheel.scroll.advanced" key="5" />
 	</range>
+
+	<!-- Battle Pass -->
+	<range start="90500" end="91000">
+		<storage name="battlepass.season.epoch" key="0" />
+		<storage name="battlepass.season.started_at" key="1" />
+		<storage name="battlepass.double_skill_until" key="231" />
+	</range>
 </storages>

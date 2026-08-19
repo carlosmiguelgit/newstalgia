@@ -638,6 +638,16 @@ function Player:onGainSkillTries(skill, tries)
 		return 0
 	end
 
+	-- Battle Pass double skill reward (storage 90731, see data/XML/storages.xml)
+	if configManager.getBoolean(configKeys.BATTLEPASS_SYSTEM_ENABLED) then
+		local battlePassSkillUntil = tonumber(self:getStorageValue(90731)) or 0
+		if battlePassSkillUntil > os.time() then
+			tries = tries * 2
+		elseif battlePassSkillUntil > 0 then
+			self:setStorageValue(90731, -1)
+		end
+	end
+
 	if not APPLY_SKILL_MULTIPLIER then
 		return tries
 	end

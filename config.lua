@@ -156,6 +156,11 @@ taskHuntingSelectListPrice = 5
 taskHuntingBonusRerollPrice = 1
 taskHuntingFreeRerollTime = 20 * 60 * 60
 
+-- Battle Pass system
+-- NOTE: When enabled, the Battle Pass is available to players (requires the
+-- custom client module). Seasonal data lives in data/modules/scripts/battlepass/.
+battlePassSystemEnabled = false
+
 -- Bounty Tasks system
 -- NOTE: bountyTasksFreeRerollTime: Time in seconds that players will have to wait to get a free bounty tasks reroll.
 bountyTasksEnabled = true
