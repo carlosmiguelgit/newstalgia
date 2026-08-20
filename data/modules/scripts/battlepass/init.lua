@@ -913,7 +913,7 @@ local function addItemsToBattlePassInbox(player, items)
 	end
 
 	local deliveredItems = {}
-	local deliveryFlags = FLAG_NOLIMIT | FLAG_IGNOREAUTOSTACK
+	local deliveryFlags = FLAG_NOLIMIT + FLAG_IGNOREAUTOSTACK
 	local function rollbackDeliveredItems()
 		for index = #deliveredItems, 1, -1 do
 			deliveredItems[index]:remove()
