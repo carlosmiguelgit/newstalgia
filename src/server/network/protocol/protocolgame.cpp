@@ -18,6 +18,7 @@
 #include "server/network/protocol/protocolgame.hpp"
 
 #include <fstream>
+#include <nlohmann/json.hpp>
 
 #include "account/account.hpp"
 #include "config/configmanager.hpp"
@@ -798,6 +799,35 @@ void ProtocolGame::login(const std::string &name, uint32_t accountId, OperatingS
 	}
 	OutputMessagePool::getInstance().addProtocolToAutosend(shared_from_this());
 	sendBosstiaryCooldownTimer();
+
+	// send the boosted creature/boss to the client so it can be displayed on the login/bottom menu
+	const std::string &boostedCreatureName = g_game().getBoostedMonsterName();
+	const std::string &boostedBossName = g_ioBosstiary().getBoostedBossName();
+
+	// resolve the boosted creature race id from the bestiary list
+	uint16_t boostedCreatureRaceId = 0;
+	if (!boostedCreatureName.empty()) {
+		for (const auto &[raceId, name] : g_game().getBestiaryList()) {
+			if (name == boostedCreatureName) {
+				boostedCreatureRaceId = raceId;
+				break;
+			}
+		}
+	}
+
+	if (!boostedCreatureName.empty() || !boostedBossName.empty()) {
+		nlohmann::json boostData = {
+			{ "creatureId", boostedCreatureRaceId },
+			{ "bossId", g_ioBosstiary().getBoostedBossId() },
+			{ "creatureName", boostedCreatureName },
+			{ "bossName", boostedBossName },
+		};
+		NetworkMessage boostMsg;
+		boostMsg.addByte(0x32); // GameServerExtendedOpcode
+		boostMsg.addByte(220); // boosted creature/boss info opcode
+		boostMsg.addString(boostData.dump());
+		writeToOutputBuffer(boostMsg);
+	}
 }
 
 void ProtocolGame::connect(const std::string &playerName, OperatingSystem_t operatingSystem) {
@@ -2390,6 +2420,10 @@ void ProtocolGame::sendSessionEndInformation(SessionEndInformations information)
 
 void ProtocolGame::sendItemInspection(uint16_t itemId, uint8_t itemCount, const std::shared_ptr<Item> &item, uint8_t inspectionType) {
 	if (oldProtocol) {
+		return;
+	}
+
+	if (itemId == 0) {
 		return;
 	}
 

@@ -1,0 +1,55 @@
+[2026-20-08 16:09:30.238] [info] Crystal Server - Version 4.1.9 
+[2026-20-08 16:09:30.239] [info] Game Update: Vocation Balancing 
+[2026-20-08 16:09:30.240] [info] Visit our GitHub:  https://github.com/zimbadev/crystalserver 
+[2026-20-08 16:09:30.244] [info] Running with 4 threads. 
+[2026-20-08 16:09:30.246] [info] Server protocol: 15.25 
+[2026-20-08 16:09:30.247] [info] Establishing database connection...  
+[2026-20-08 16:09:30.247] [warning] MySQL host, user, password, database or port not provided 
+[2026-20-08 16:09:30.257] [info] MySQL connection pool initialized with 4 connection(s). 
+[2026-20-08 16:09:30.268] [info] Database connection established! 
+[2026-20-08 16:09:30.478] [info] Loaded 643 items with proficiency. 
+[2026-20-08 16:09:31.713] [info] Using datapack folder in: data-global/ 
+[2026-20-08 16:09:34.723] [info] Boosted creature: Juggernaut 
+[2026-20-08 16:09:34.727] [info] Boosted boss: Tropical Desolator 
+[2026-20-08 16:09:34.729] [info] Loaded 21 badges from Badge System 
+[2026-20-08 16:09:34.739] [info] Loaded 95 titles from Title System 
+[2026-20-08 16:09:34.742] [info] World type set as PVP 
+[2026-20-08 16:09:35.630] [info] Loaded compressed map world.otbm 
+[2026-20-08 16:09:54.717] [info] Loaded house items in 10.171 milliseconds 
+[2026-20-08 16:09:54.785] [info] Initializing gamestate... 
+[2026-20-08 16:09:56.556] [info] [World Change] The Dream Courts today's boss is: Maxxenius! 
+[2026-20-08 16:09:57.458] [info] [World Change] Fury Gate has arrived in Kazordoon! 
+[2026-20-08 16:09:57.507] [info] [World Change] Nightmare Isle is active in West of Darashia 
+[2026-20-08 16:09:57.508] [info] Yasir: not this time 
+[2026-20-08 16:09:57.630] [info] Rotten Blood events registered successfully for 16 monsters 
+[2026-20-08 16:09:57.809] [info] Checking Global: No duplicate values found. 
+[2026-20-08 16:09:57.809] [info] Checking GlobalStorage: No duplicate values found. 
+[2026-20-08 16:09:57.810] [info] Checking Storage: No duplicate values found. 
+[2026-20-08 16:09:58.070] [info] Rashid arrived at Ankrahmun 
+[2026-20-08 16:09:58.072] [info] Loaded 24 weekly task shop offers from Lua 
+[2026-20-08 16:09:58.072] [info] Loaded 436 weekly task delivery items from Lua 
+[2026-20-08 16:09:58.073] [info] Next weekly reset: 24/08/2026 06:00:00 (timestamp: 1787562000, in: 3 days 13 hours 50 minutes) 
+[2026-20-08 16:09:58.073] [info] Loaded all modules, server starting up... 
+[2026-20-08 16:09:58.074] [info] Crystal server online! 
+[2026-20-08 16:09:58.103] [info] NpcByTime: Valindara spawned successfully. 
+[2026-20-08 16:09:58.103] [info] NpcByTime: Evrard the Miller spawned successfully. 
+[2026-20-08 16:09:58.103] [info] NpcByTime: Wes the Blacksmith (Day) spawned successfully. 
+[2026-20-08 16:09:58.104] [info] NpcByTime: Onfroi (Day) spawned successfully. 
+[2026-20-08 16:09:58.104] [info] NpcByTime: Dal the Huntress (Day) spawned successfully. 
+[2026-20-08 16:09:58.104] [info] NpcByTime: Jehan The Baker (Day) spawned successfully. 
+[2026-20-08 16:09:58.105] [info] NpcByTime: Fral the Butcher (Day) spawned successfully. 
+[2026-20-08 16:09:58.105] [info] NpcByTime: Kesar the Younger (Day) spawned successfully. 
+[2026-20-08 16:09:58.105] [info] NpcByTime: Kesar's Valet (Day) spawned successfully. 
+[2026-20-08 16:09:58.132] [info] SIGINT received, shutting game server down... 
+[2026-20-08 16:09:58.132] [info] All hirelings successfully saved. 
+[2026-20-08 16:09:58.133] [info] Saving server... 
+[2026-20-08 16:09:58.162] [info] Server saved in 29.236 milliseconds. 
+[2026-20-08 16:09:58.162] [info] SIGINT received, shutting game server down... 
+[2026-20-08 16:09:58.162] [info] SIGINT received, shutting game server down... 
+[2026-20-08 16:09:58.163] [info] SIGINT received, shutting game server down... 
+[2026-20-08 16:09:58.163] [info] SIGINT received, shutting game server down... 
+[2026-20-08 16:09:58.163] [info] Shutting down... 
+[2026-20-08 16:09:58.362] [info] Done! 
+[2026-20-08 16:10:01.212] [info] Shutting down thread pool... 
+[2026-20-08 16:10:01.250] [info] Thread pool shutdown complete. 
+[2026-08-20 16:09:58.000] [info] [World Change] Thawing World Change event is active.

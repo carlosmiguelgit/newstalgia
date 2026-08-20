@@ -460,7 +460,9 @@ function Player.selectDailyReward(self, msg)
 		end
 
 		if totalCounter > rewardCount then
-			logger.info("Player with name {} is trying to get totalCounter: {} more than rewardCount: {}!", self:getName(), totalCounter, rewardCount)
+			logger.warn("Player with name {} is trying to get totalCounter: {} more than rewardCount: {}!", self:getName(), totalCounter, rewardCount)
+			self:sendError("You cannot select more items than the allowed amount.")
+			return false
 		end
 		if totalCounter ~= orderedCounter then
 			logger.error("Player with name {} is trying to get wrong daily reward", self:getName())
