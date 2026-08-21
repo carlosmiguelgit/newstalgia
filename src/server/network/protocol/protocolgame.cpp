@@ -11237,7 +11237,7 @@ void ProtocolGame::sendHouseAuctionMessage(uint32_t houseId, HouseAuctionType ty
 	msg.addByte(0xC3);
 	msg.add<uint32_t>(houseId);
 	msg.addByte(typeValue);
-	if (bidSuccess && typeValue == 1) {
+	if (typeValue == 1) {
 		msg.addByte(0x00);
 	}
 	msg.addByte(index);

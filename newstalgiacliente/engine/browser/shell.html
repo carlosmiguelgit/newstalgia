@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Loading</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        overscroll-behavior: contain;
+      }
+      .backbuffer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        border: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: block;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+      .title {
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        margin-top: 0px;
+        padding-left: 10px;
+        color: white;
+        text-decoration: none;
+        z-index: 1;
+        text-align: left;
+        font-family: "Roboto", Helvetica, sans-serif;
+        font-size: 20px;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+      #start {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        font-size: 2rem;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="title"
+      id="title-text"
+      contenteditable
+      virtualkeyboardpolicy="manual"
+    ></div>
+    <button id="start" onclick="startGame()">Start</button>
+    <canvas
+      class="backbuffer"
+      id="canvas"
+      oncontextmenu="event.preventDefault()"
+      tabindex="0"
+    ></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("canvas");
+      function reportRuntimeError(prefix, error) {
+        const payload = [prefix, error]
+          .flat()
+          .filter(Boolean)
+          .map((entry) => {
+            if (!entry) return "";
+            if (typeof entry === "string") {
+              return entry;
+            }
+            if (entry.stack) {
+              return entry.stack;
+            }
+            try {
+              return JSON.stringify(entry);
+            } catch (_) {
+              return String(entry);
+            }
+          })
+          .join(": ");
+        console.error(payload);
+        const title = document.getElementById("title-text");
+        if (title) {
+          title.innerHTML = "Runtime error – check console";
+        }
+      }
+      // Reenvia as linhas de stdout/stderr do WASM (logs do client) para o
+      // servidor (serve_web.py /log), que imprime tudo no terminal.
+      var logBuffer = [];
+      var logFlushTimer = null;
+      function flushClientLogs() {
+        if (logBuffer.length === 0) {
+          return;
+        }
+        var payload = logBuffer.join("\n");
+        logBuffer = [];
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "log/", true);
+        xhr.setRequestHeader("Content-Type", "text/plain; charset=utf-8");
+        xhr.onload = function () {};
+        xhr.onerror = function () {};
+        xhr.send(payload);
+      }
+      function pushClientLog(level, text) {
+        logBuffer.push("[" + level + "] " + text);
+        if (logFlushTimer) {
+          clearTimeout(logFlushTimer);
+        }
+        logFlushTimer = setTimeout(flushClientLogs, 50);
+      }
+      // ------------------------------------------------------------------
+      // Armazenamento: auto-recuperacao de caches corrompidos + backup do
+      // config.otml em localStorage (sobrevive a limpeza do IndexedDB).
+      // ------------------------------------------------------------------
+      var CONFIG_FS_PATH = "/user/otclient/config.otml";
+      var CONFIG_BACKUP_KEY = "otclient:config.otml";
+      var RECOVERY_FLAG = "otclient:recovering";
+      var CONFIG_AUTOSAVE_MS = 15000;
+      var SYNCFS_TIMEOUT_MS = 15000;
+
+      function getAllIndexedDBs() {
+        return new Promise(function (resolve) {
+          if (indexedDB.databases) {
+            indexedDB.databases().then(
+              function (dbs) {
+                resolve(dbs.map(function (d) { return d.name; }));
+              },
+              function () { resolve([]); }
+            );
+          } else {
+            resolve([]);
+          }
+        });
+      }
+
+      // Apaga todos os bancos IndexedDB desta origin (EM_PRELOAD_CACHE e o
+      // IDBFS /user). O backup do config em localStorage NAO e apagado.
+      function clearClientStorage() {
+        return getAllIndexedDBs().then(function (names) {
+          var pending = names.map(function (name) {
+            return new Promise(function (resolve) {
+              var req = indexedDB.deleteDatabase(name);
+              req.onsuccess = req.onerror = req.onblocked = function () { resolve(); };
+            });
+          });
+          return Promise.all(pending);
+        });
+      }
+
+      function readFsFile(path) {
+        try {
+          if (FS.analyzePath(path).exists) {
+            return FS.readFile(path, { encoding: "utf8" });
+          }
+        } catch (e) {}
+        return null;
+      }
+
+      function writeFsFile(path, data) {
+        try {
+          var parts = path.split("/");
+          var dir = "/" + parts.slice(1, -1).join("/");
+          if (!FS.analyzePath(dir).exists) FS.mkdirTree(dir);
+          FS.writeFile(path, data);
+          return true;
+        } catch (e) {
+          return false;
+        }
+      }
+
+      function saveConfigBackup() {
+        var content = readFsFile(CONFIG_FS_PATH);
+        if (content == null) return;
+        try {
+          if (localStorage.getItem(CONFIG_BACKUP_KEY) !== content) {
+            localStorage.setItem(CONFIG_BACKUP_KEY, content);
+            pushClientLog("LOG", "config.otml salvo no backup local");
+          }
+        } catch (e) {}
+      }
+
+      function restoreConfigBackup() {
+        try {
+          if (readFsFile(CONFIG_FS_PATH) != null) return;
+          var content = localStorage.getItem(CONFIG_BACKUP_KEY);
+          if (content) {
+            writeFsFile(CONFIG_FS_PATH, content);
+            pushClientLog("LOG", "config.otml restaurado do backup");
+          }
+        } catch (e) {}
+      }
+
+      function clearRecoveryFlag() {
+        try { sessionStorage.removeItem(RECOVERY_FLAG); } catch (e) {}
+      }
+
+      // Reseta o cache do client (IndexedDB) e recarrega a pagina.
+      window.resetClientCache = function () {
+        try { sessionStorage.removeItem(RECOVERY_FLAG); } catch (e) {}
+        pushClientLog("LOG", "Resetando cache do client (IndexedDB)...");
+        clearClientStorage().then(function () {
+          window.location.href = window.location.pathname;
+        });
+      };
+      function startGame() {
+        document.getElementById("start").style.display = "none";
+        callMain();
+        document.addEventListener("touchstart", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+        });
+        document.addEventListener("touchmove", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+        });
+        document.addEventListener("touchend", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+        });
+        document.addEventListener("keyup", function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+        });
+        document.addEventListener("keydown", function (ev) {
+          if (
+            !ev.ctrlKey &&
+            ev.key !== "Enter" &&
+            ev.key !== "Escape" &&
+            ev.key !== "Backspace" &&
+            ev.key !== "ArrowLeft" &&
+            ev.key !== "ArrowRight" &&
+            ev.key !== "ArrowUp" &&
+            ev.key !== "ArrowDown"
+          ) {
+            canvas.dispatchEvent(new KeyboardEvent("keypress", ev));
+          } else if (ev.ctrlKey && ev.key === "v") {
+            return true;
+          }
+          ev.preventDefault();
+          ev.stopPropagation();
+        });
+      }
+      var Module = {
+        locateFile: function (path) {
+          const baseURL =
+            window.location.origin +
+            window.location.pathname.substring(
+              0,
+              window.location.pathname.lastIndexOf("/")
+            );
+          return baseURL + "/" + path;
+        },
+        preRun: [
+          function () {
+            addRunDependency("syncfs");
+            if (!FS.analyzePath("/user").exists) FS.mkdir("/user");
+            FS.mount(IDBFS, { autoPersist: true }, "/user");
+            var syncfsDone = false;
+            var syncfsFinished = function (err) {
+              if (syncfsDone) return;
+              syncfsDone = true;
+              if (err) {
+                Module.print("IDBFS syncfs error: " + err);
+              } else {
+                clearRecoveryFlag();
+              }
+              restoreConfigBackup();
+              removeRunDependency("syncfs");
+            };
+            try {
+              FS.syncfs(true, syncfsFinished);
+            } catch (e) {
+              syncfsFinished(e);
+            }
+            // Se o syncfs travar (IndexedDB corrompido), limpa o armazenamento
+            // e recarrega uma vez para sair do estado travado.
+            setTimeout(function () {
+              if (syncfsDone) return;
+              pushClientLog("ERR", "syncfs travado - recuperando armazenamento...");
+              var recovering = false;
+              try { recovering = sessionStorage.getItem(RECOVERY_FLAG) === "1"; } catch (e) {}
+              if (recovering) {
+                Module.print("IDBFS syncfs timeout; seguindo sem armazenamento persistente.");
+                syncfsFinished("timeout");
+              } else {
+                try { sessionStorage.setItem(RECOVERY_FLAG, "1"); } catch (e) {}
+                clearClientStorage().then(function () {
+                  window.location.reload();
+                });
+              }
+            }, SYNCFS_TIMEOUT_MS);
+          },
+          function () {
+            addRunDependency("spr");
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "data/things/1525/Tibia.spr", true);
+            xhr.responseType = "arraybuffer";
+            xhr.onload = function () {
+              if (xhr.status === 200 && xhr.response.byteLength > 0) {
+                if (!FS.analyzePath("/data/things/1525").exists) FS.mkdirTree("/data/things/1525");
+                FS.writeFile("/data/things/1525/Tibia.spr", new Uint8Array(xhr.response));
+                console.log("Tibia.spr loaded (" + xhr.response.byteLength + " bytes)");
+              } else {
+                console.error("Failed to load Tibia.spr: HTTP " + xhr.status);
+              }
+              removeRunDependency("spr");
+            };
+            xhr.onerror = function () {
+              console.error("Failed to load Tibia.spr: network error");
+              removeRunDependency("spr");
+            };
+            xhr.send();
+          },
+        ],
+        postRun: [],
+        print: (function () {
+          return function (text) {
+            text = Array.prototype.slice.call(arguments).join(" ");
+            console.log(text);
+            pushClientLog("LOG", text);
+          };
+        })(),
+        printErr: function () {
+          const text = Array.prototype.slice.call(arguments).join(" ");
+          console.error(text);
+          pushClientLog("ERR", text);
+          reportRuntimeError("stderr", text);
+        },
+        canvas: (function () {
+          var canvas = document.getElementById("canvas");
+          return canvas;
+        })(),
+        onAbort: function (reason) {
+          reportRuntimeError("abort", reason || "unknown reason");
+        },
+        setStatus: function (text) {
+          console.log("status: " + text);
+          let display = "";
+          if (text.includes("Running...")) {
+            display = "Loading...";
+            document.getElementById("start").style.display = "block";
+          } else if (text.includes("Downloading data...")) {
+            display = text;
+          }
+
+          document.getElementById("title-text").innerHTML = display;
+        },
+        monitorRunDependencies: function (left) {
+          console.log("monitor run deps: " + left);
+          document.getElementById("title-text").innerHTML = "Initializing...";
+        },
+      };
+      // Inicializacao: trata ?reset=1 e inicia o backup automatico do config.
+      (function () {
+        if (window.location.search.indexOf("reset=1") !== -1) {
+          window.resetClientCache();
+          return;
+        }
+        setInterval(saveConfigBackup, CONFIG_AUTOSAVE_MS);
+        window.addEventListener("pagehide", saveConfigBackup);
+        window.addEventListener("beforeunload", saveConfigBackup);
+      })();
+      window.onerror = function (message, source, lineno, colno, error) {
+        reportRuntimeError("window.onerror", error || message);
+      };
+      window.addEventListener("unhandledrejection", function (event) {
+        reportRuntimeError("unhandledrejection", event.reason || "Promise rejected");
+      });
+    </script>
+    {{{ SCRIPT }}}
+  </body>
+</html>

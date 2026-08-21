@@ -1,0 +1,17 @@
+Panel
+  id: background
+  image-source: /images/background
+  image-smooth: false
+  image-fixed-ratio: true
+  anchors.top: parent.top
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-top: 1
+  focusable: false
+
+  UIParticles
+    id: particles
+    effect: background-effect
+    anchors.fill: parent
+    phantom: true

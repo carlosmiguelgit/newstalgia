@@ -1,0 +1,79 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": {
+          "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+          "type": "FILEPATH"
+        },
+        "CMAKE_COLOR_DIAGNOSTICS": "ON",
+        "SPEED_UP_BUILD_UNITY": "ON",
+        "VCPKG_INSTALL_OPTIONS": "--clean-packages-after-build;--clean-buildtrees-after-build"
+      }
+    },
+    {
+      "name": "web-release",
+      "inherits": "base",
+      "displayName": "Web (WebAssembly) - Release",
+      "description": "WebAssembly release build for the browser client (desktop/mobile/tablet/TV)",
+      "binaryDir": "${sourceDir}/build-emscripten-web",
+      "cacheVariables": {
+        "WASM": "ON",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_STANDARD": "20",
+        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": {
+          "value": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+          "type": "FILEPATH"
+        },
+        "VCPKG_TARGET_TRIPLET": "wasm32-emscripten-pthread",
+        "VCPKG_HOST_TRIPLET": "x64-windows",
+        "VCPKG_OVERLAY_TRIPLETS": "${sourceDir}/browser/triplets",
+        "VCPKG_OVERLAY_PORTS": "${sourceDir}/browser/overlay-ports",
+        "VCPKG_BUILD_TYPE": "release",
+        "WASM_USE_WASM_EXCEPTIONS": "OFF",
+        "OPTIONS_ENABLE_IPO": "OFF",
+        "TOGGLE_BIN_FOLDER": "ON",
+        "CMAKE_C_FLAGS": "-pthread -matomics -mbulk-memory -fno-lto",
+        "CMAKE_CXX_FLAGS": "-pthread -matomics -mbulk-memory -fno-lto -std=c++20 -D_LIBCPP_DISABLE_AVAILABILITY -fexperimental-library",
+        "CMAKE_EXE_LINKER_FLAGS": "-pthread -matomics -mbulk-memory -s ALLOW_MEMORY_GROWTH=0 -s INITIAL_MEMORY=1073741824 -s USE_PTHREADS=1 -s PTHREAD_POOL_SIZE=4 -s WASM=1 -s NO_EXIT_RUNTIME=1 -fno-lto",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O2 -DNDEBUG -fno-lto",
+        "CMAKE_CXX_FLAGS_DEBUG": "-O0 -g -fno-lto",
+        "CMAKE_INTERPROCEDURAL_OPTIMIZATION": "OFF",
+        "OTCLIENT_BUILD_TESTS": "OFF"
+      }
+    },
+    {
+      "name": "web-debug",
+      "inherits": "web-release",
+      "displayName": "Web (WebAssembly) - Debug",
+      "description": "WebAssembly debug build for the browser client",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "DEBUG_LOG": "ON",
+        "ASAN_ENABLED": "OFF",
+        "SPEED_UP_BUILD_UNITY": "OFF",
+        "VCPKG_BUILD_TYPE": "debug"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "web-release",
+      "configurePreset": "web-release"
+    },
+    {
+      "name": "web-debug",
+      "configurePreset": "web-debug"
+    }
+  ]
+}

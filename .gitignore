@@ -1,2 +1,4 @@
-/newstalgiacliente
 /vcproj
+/newstalgiacliente/data/things/1525
+newstalgiacliente/engine/build-emscripten-web/bin/otclient.data
+newstalgiacliente/engine/build-emscripten-web/src/protobuf/CMakeFiles/protobuf.dir/staticdata.pb.cc.o

@@ -1,0 +1,50 @@
+{
+  "name": "otclient",
+  "version-string": "1.0.0",
+  "dependencies": [
+    "asio",
+    "abseil",
+    "cpp-httplib",
+    "cppcodec",
+    "liblzma",
+    "libarchive",
+    "libobfuscate",
+    "libogg",
+    {
+      "name": "libpng",
+      "features": [
+        "apng"
+      ]
+    },
+    "libvorbis",
+    "nlohmann-json",
+    "openal-soft",
+    "openssl",
+    "parallel-hashmap",
+    "physfs",
+    "protobuf",
+    "pugixml",
+    "stduuid",
+    "zlib",
+    "bshoshany-thread-pool",
+    "fmt",
+    "spdlog",
+    "utfcpp",
+    "freetype",
+    {
+      "name": "inih",
+      "features": [
+        "cpp"
+      ]
+    }
+  ],
+  "features": {
+    "tests": {
+      "description": "Dependencies required to build unit tests.",
+      "dependencies": [
+        "gtest"
+      ]
+    }
+  },
+  "builtin-baseline": "cd61e1e26a038e82d6550a3ebbe0fbbfe7da78e3"
+}
