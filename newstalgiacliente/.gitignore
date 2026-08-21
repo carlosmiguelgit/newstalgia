@@ -1,0 +1,14 @@
+# Build output
+engine/build-emscripten-web/
+
+# Files > 99MB (GitHub limit)
+data/things/1525/Tibia.spr
+data/things/1525/Tibia.pic
+
+# Compiled binaries
+*.exe
+*.pdb
+*.dll
+*.lib
+*.o
+*.obj

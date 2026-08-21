@@ -1453,9 +1453,6 @@ void ProtocolGame::parseMapDescription(const InputMessagePtr& msg)
     const auto& pos = getPosition(msg);
     const auto& oldPos = m_localPlayer->getPosition();
 
-    g_logger.info("[DEBUG Proto] parseMapDescription: pos={}x{}x{} localPos={}x{}x{} mapKnown={}",
-        pos.x, pos.y, pos.z, oldPos.x, oldPos.y, oldPos.z, m_mapKnown);
-
     if (!m_mapKnown) {
         m_localPlayer->setPosition(pos);
     }
@@ -1463,9 +1460,6 @@ void ProtocolGame::parseMapDescription(const InputMessagePtr& msg)
     g_map.setCentralPosition(pos);
 
     const auto& range = g_map.getAwareRange();
-    g_logger.info("[DEBUG Proto] awareRange: left={} top={} right={} bottom={} horiz={} vert={}",
-        range.left, range.top, range.right, range.bottom, range.horizontal(), range.vertical());
-
     setMapDescription(msg, pos.x - range.left, pos.y - range.top, pos.z, range.horizontal(), range.vertical());
 
     if (!m_mapKnown) {

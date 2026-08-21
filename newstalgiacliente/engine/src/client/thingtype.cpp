@@ -833,13 +833,6 @@ const TexturePtr& ThingType::getTexture(const int animationPhase)
     if (textureData.source)
         return textureData.source;
 
-    static int s_textureCount = 0;
-    if (s_textureCount < 5) {
-        s_textureCount++;
-        g_logger.info("[DEBUG ThingType] getTexture: id={} name='{}' size={}x{} spriteSize={} animPhase={} category={}",
-            m_id, m_name, m_size.width(), m_size.height(), g_gameConfig.getSpriteSize(), animationPhase, static_cast<int>(m_category));
-    }
-
     bool expected = false;
     if (m_loading.compare_exchange_strong(expected, true, std::memory_order_acq_rel)) {
         bool async = g_app.isLoadingAsyncTexture();

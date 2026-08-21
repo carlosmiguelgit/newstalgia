@@ -1,0 +1,8 @@
+*.otmod text eol=lf
+*.otui text eol=lf
+*.lua text eol=lf
+*.otml text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.c text eol=lf

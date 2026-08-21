@@ -123,14 +123,6 @@ void MapView::preLoad() {
 
 void MapView::drawFloor()
 {
-    static bool s_drawFloorLogged = false;
-    if (!s_drawFloorLogged) {
-        s_drawFloorLogged = true;
-        g_logger.info("[DEBUG MapView] drawFloor called: floorMin={} floorMax={} camera={}x{}x{} rect={}x{} tileSize={} visibleDim={}x{}",
-            m_floorMin, m_floorMax, m_posInfo.camera.x, m_posInfo.camera.y, m_posInfo.camera.z,
-            m_rectDimension.width(), m_rectDimension.height(), m_tileSize, m_visibleDimension.width(), m_visibleDimension.height());
-    }
-
     const auto& cameraPosition = m_posInfo.camera;
 
     uint32_t flags = Otc::DrawThings;
@@ -488,10 +480,8 @@ void MapView::updateRect(const Rect& rect) {
 
 void MapView::updateGeometry(const Size& visibleDimension)
 {
-    if (visibleDimension.width() < 3 || visibleDimension.height() < 3) {
-        g_logger.warning("[DEBUG MapView] updateGeometry: rejecting invalid dimension {}x{}", visibleDimension.width(), visibleDimension.height());
+    if (visibleDimension.width() < 3 || visibleDimension.height() < 3)
         return;
-    }
 
     float scaleFactor = m_antiAliasingMode == Otc::ANTIALIASING_SMOOTH_RETRO ? 2.f : 1.f;
 
@@ -514,12 +504,6 @@ void MapView::updateGeometry(const Size& visibleDimension)
     const uint16_t tileSize = g_gameConfig.getSpriteSize() * m_pool->getScaleFactor();
     const auto& drawDimension = visibleDimension + 3;
     const auto& bufferSize = drawDimension * tileSize;
-
-    g_logger.info("[DEBUG MapView] updateGeometry: visible={}x{} draw={}x{} tileSize={} buffer={}x{} scaleFactor={} maxTex={}",
-        visibleDimension.width(), visibleDimension.height(),
-        drawDimension.width(), drawDimension.height(),
-        tileSize, bufferSize.width(), bufferSize.height(),
-        m_pool->getScaleFactor(), g_graphics.getMaxTextureSize());
 
     if (bufferSize.width() > g_graphics.getMaxTextureSize() || bufferSize.height() > g_graphics.getMaxTextureSize()) {
         g_logger.traceError("reached max zoom out");
