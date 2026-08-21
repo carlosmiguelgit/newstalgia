@@ -143,8 +143,11 @@ void UIItem::setItem(const ItemPtr& item)
     m_displayCount = 0;
     if (item)
         m_itemId = item->getClientId();
+    else
+        m_itemId = 0;
 
     callLuaField("onItemChange");
+    repaint();
 }
 
 void UIItem::onStyleApply(const std::string_view styleName, const OTMLNodePtr& styleNode)

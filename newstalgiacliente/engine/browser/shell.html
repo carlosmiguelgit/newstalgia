@@ -94,10 +94,6 @@
           })
           .join(": ");
         console.error(payload);
-        const title = document.getElementById("title-text");
-        if (title) {
-          title.innerHTML = "Runtime error – check console";
-        }
       }
       // Reenvia as linhas de stdout/stderr do WASM (logs do client) para o
       // servidor (serve_web.py /log), que imprime tudo no terminal.

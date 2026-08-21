@@ -3,3 +3,5 @@
 newstalgiacliente/engine/build-emscripten-web/bin/otclient.data
 newstalgiacliente/engine/build-emscripten-web/src/protobuf/CMakeFiles/protobuf.dir/staticdata.pb.cc.o
 crystalserver-x64.pdb
+data/logs/GOD commands.log
+da_dump.txt

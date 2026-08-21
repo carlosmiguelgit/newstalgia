@@ -101,7 +101,7 @@ private:
     std::string m_typingIcon{ "/images/game/console/typing" };
 
     // Map
-    Size m_mapViewPort{ 8,6 };
+    Size m_mapViewPort{ 11,6 };
     uint8_t m_mapMaxZ{ 15 };
     uint8_t m_mapSeaFloor{ 7 };
     uint8_t m_mapUndergroundFloorRange{ 2 };
