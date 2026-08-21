@@ -1,0 +1,539 @@
+﻿[0/1] Re-running CMake...
+-- Shared vcpkg installed tree disabled: explicitly disabled
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+Detecting compiler hash for triplet wasm32-emscripten-pthread...
+Compiler found: D:/emsdk/upstream/emscripten/em++.exe
+The following packages are already installed:
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+The following packages will be built and installed:
+    abseil:wasm32-emscripten-pthread@20240722.0 -- C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\abseil
+  * abseil:x64-windows@20240722.0 -- C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\abseil
+    asio:wasm32-emscripten-pthread@1.32.0
+  * brotli:wasm32-emscripten-pthread@1.2.0
+    bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0
+  * bzip2[core,tool]:wasm32-emscripten-pthread@1.0.8#6
+    cpp-httplib[brotli,core]:wasm32-emscripten-pthread@0.48.0
+    cppcodec:wasm32-emscripten-pthread@0.2#4
+    fmt:wasm32-emscripten-pthread@12.2.0
+    freetype[brotli,bzip2,core,png,zlib]:wasm32-emscripten-pthread@2.14.3
+    inih[core,cpp]:wasm32-emscripten-pthread@62#1
+    libarchive[bzip2,core,crypto,lz4,lzma,xar,zstd]:wasm32-emscripten-pthread@3.8.7
+  * libiconv:wasm32-emscripten-pthread@1.19
+    liblzma:wasm32-emscripten-pthread@5.8.3
+    libobfuscate:wasm32-emscripten-pthread@2024-07-10
+    libogg:wasm32-emscripten-pthread@1.3.6#1
+    libpng[apng,core]:wasm32-emscripten-pthread@1.6.58
+    libvorbis:wasm32-emscripten-pthread@1.3.7#4
+  * libxml2[core,iconv,zlib]:wasm32-emscripten-pthread@2.15.3
+  * lz4:wasm32-emscripten-pthread@1.10.0
+    nlohmann-json:wasm32-emscripten-pthread@3.12.0#2
+    openal-soft:wasm32-emscripten-pthread@1.25.1#2
+    openssl:wasm32-emscripten-pthread@3.6.3
+    parallel-hashmap:wasm32-emscripten-pthread@2.0.0
+    physfs:wasm32-emscripten-pthread@3.2.0#1 -- C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\physfs
+  * protobuf:x64-windows@4.25.1#1 -- C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\protobuf
+    protobuf:wasm32-emscripten-pthread@4.25.1#1 -- C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\protobuf
+    pugixml:wasm32-emscripten-pthread@1.16
+    spdlog[core,fmt,tz-offset]:wasm32-emscripten-pthread@1.17.0
+    stduuid:wasm32-emscripten-pthread@1.2.3
+  * utf8-range:wasm32-emscripten-pthread@6.33.4
+  * utf8-range:x64-windows@6.33.4
+    utfcpp:wasm32-emscripten-pthread@4.1.1
+  * vcpkg-cmake-get-vars:x64-windows@2025-05-29
+  * vcpkg-make:x64-windows@2026-01-01
+  * vcpkg-tool-meson:x64-windows@1.9.0#10
+    zlib:wasm32-emscripten-pthread@1.3.2#1
+  * zstd:wasm32-emscripten-pthread@1.5.7
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from C:\Users\Administrador\AppData\Local\vcpkg\archives in 963 us. Use --debug to see more details.
+Installing 1/38 abseil:wasm32-emscripten-pthread@20240722.0...
+abseil:wasm32-emscripten-pthread@20240722.0 package ABI: 4aa1588b7a74671e755c6b0bbbf645865dd0a34b63762c5b69f60f33f6fabc85
+Building abseil:wasm32-emscripten-pthread@20240722.0...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/browser/overlay-ports\abseil: info: installing overlay port from here
+-- Using cached abseil-abseil-cpp-20240722.0.tar.gz
+-- Cleaning sources at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/abseil/src/20240722.0-f8a97d5e17.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source D:/vcpkg/downloads/abseil-abseil-cpp-20240722.0.tar.gz
+-- Applying patch use_pthread.patch
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/abseil/src/20240722.0-f8a97d5e17.clean
+-- Configuring wasm32-emscripten-pthread-dbg
+-- Configuring wasm32-emscripten-pthread-rel
+-- Building wasm32-emscripten-pthread-dbg
+-- Building wasm32-emscripten-pthread-rel
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_absl_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_absl_log.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_absl_vlog_is_on.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_algorithm.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_algorithm_container.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_any.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_any_invocable.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_atomic_hook.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bad_any_cast.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bad_any_cast_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bad_optional_access.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bad_variant_access.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_base.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_base_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bind_front.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_bounded_utf8_length_sequence.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_btree.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_charset.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_city.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_civil_time.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cleanup.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cleanup_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_common_policy_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_compare.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_compressed_tuple.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_container_common.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_container_memory.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cord.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cord_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_functions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_handle.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_info.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_sample_token.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_statistics.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_update_scope.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_cordz_update_tracker.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_core_headers.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_crc32c.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_crc_cord_state.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_crc_cpu_detect.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_crc_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_debugging.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_debugging_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_decode_rust_punycode.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_demangle_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_demangle_rust.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_die_if_null.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_dynamic_annotations.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_endian.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_errno_saver.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_examine_stack.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_exponential_biased.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_failure_signal_handler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_fast_type_id.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_fixed_array.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_commandlineflag.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_commandlineflag_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_marshalling.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_parse.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_path_util.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_private_handle_accessor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_program_name.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_reflection.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_usage.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flags_usage_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flat_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_flat_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_function_ref.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_graphcycles_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_has_ostream_operator.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hash.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hash_container_defaults.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hash_function_defaults.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hash_policy_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hashtable_debug.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hashtable_debug_hooks.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_hashtablez_sampler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_if_constexpr.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_inlined_vector.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_inlined_vector_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_int128.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_kernel_timeout_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_layout.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_leak_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_entry.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_globals.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_initialize.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_append_truncated.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_check_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_check_op.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_conditions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_fnmatch.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_format.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_globals.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_log_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_log_sink_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_message.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_nullguard.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_nullstream.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_proto.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_strip.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_structured.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_internal_voidify.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_severity.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_sink.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_sink_registry.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_streamer.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_log_structured.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_low_level_hash.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_malloc_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_memory.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_meta.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_no_destructor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_node_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_node_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_node_slot_policy.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_non_temporal_arm_intrinsics.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_non_temporal_memcpy.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_nullability.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_numeric.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_numeric_representation.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_optional.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_overload.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_periodic_sampler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_poison.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_prefetch.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_pretty_function.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_bit_gen_ref.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_distributions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_distribution_caller.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_distribution_test_util.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_fast_uniform_bits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_fastmath.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_generate_real.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_iostream_state_saver.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_mock_helpers.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_nonsecure_base.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_pcg_engine.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_platform.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_pool_urbg.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_randen.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_randen_engine.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_randen_hwaes.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_randen_hwaes_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_randen_slow.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_salted_seed_seq.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_seed_material.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_uniform_helper.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_internal_wide_multiply.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_random.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_seed_gen_exception.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_random_seed_sequences.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_raw_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_raw_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_raw_logging_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_sample_recorder.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_scoped_set_env.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_span.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_spinlock_wait.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_stacktrace.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_status.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_statusor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_str_format.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_str_format_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_strerror.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_string_view.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_strings.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_strings_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_symbolize.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_synchronization.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_throw_delegate.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_time.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_time_zone.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_type_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_utf8_for_code_point.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_utility.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_variant.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_vlog_config_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/lib/pkgconfig/absl_vlog_is_on.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_absl_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_absl_log.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_absl_vlog_is_on.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_algorithm.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_algorithm_container.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_any.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_any_invocable.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_atomic_hook.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bad_any_cast.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bad_any_cast_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bad_optional_access.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bad_variant_access.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_base.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_base_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bind_front.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_bounded_utf8_length_sequence.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_btree.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_charset.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_city.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_civil_time.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cleanup.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cleanup_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_common_policy_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_compare.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_compressed_tuple.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_container_common.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_container_memory.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cord.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cord_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_functions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_handle.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_info.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_sample_token.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_statistics.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_update_scope.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_cordz_update_tracker.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_core_headers.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_crc32c.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_crc_cord_state.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_crc_cpu_detect.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_crc_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_debugging.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_debugging_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_decode_rust_punycode.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_demangle_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_demangle_rust.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_die_if_null.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_dynamic_annotations.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_endian.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_errno_saver.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_examine_stack.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_exponential_biased.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_failure_signal_handler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_fast_type_id.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_fixed_array.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_commandlineflag.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_commandlineflag_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_marshalling.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_parse.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_path_util.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_private_handle_accessor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_program_name.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_reflection.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_usage.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flags_usage_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flat_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_flat_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_function_ref.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_graphcycles_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_has_ostream_operator.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hash.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hash_container_defaults.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hash_function_defaults.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hash_policy_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hashtable_debug.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hashtable_debug_hooks.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_hashtablez_sampler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_if_constexpr.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_inlined_vector.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_inlined_vector_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_int128.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_kernel_timeout_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_layout.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_leak_check.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_entry.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_globals.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_initialize.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_append_truncated.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_check_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_check_op.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_conditions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_config.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_flags.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_fnmatch.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_format.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_globals.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_log_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_log_sink_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_message.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_nullguard.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_nullstream.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_proto.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_strip.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_structured.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_internal_voidify.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_severity.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_sink.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_sink_registry.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_streamer.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_log_structured.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_low_level_hash.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_malloc_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_memory.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_meta.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_no_destructor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_node_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_node_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_node_slot_policy.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_non_temporal_arm_intrinsics.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_non_temporal_memcpy.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_nullability.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_numeric.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_numeric_representation.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_optional.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_overload.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_periodic_sampler.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_poison.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_prefetch.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_pretty_function.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_bit_gen_ref.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_distributions.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_distribution_caller.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_distribution_test_util.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_fast_uniform_bits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_fastmath.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_generate_real.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_iostream_state_saver.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_mock_helpers.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_nonsecure_base.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_pcg_engine.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_platform.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_pool_urbg.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_randen.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_randen_engine.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_randen_hwaes.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_randen_hwaes_impl.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_randen_slow.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_salted_seed_seq.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_seed_material.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_uniform_helper.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_internal_wide_multiply.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_random.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_seed_gen_exception.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_random_seed_sequences.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_raw_hash_map.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_raw_hash_set.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_raw_logging_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_sample_recorder.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_scoped_set_env.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_span.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_spinlock_wait.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_stacktrace.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_status.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_statusor.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_str_format.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_str_format_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_strerror.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_string_view.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_strings.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_strings_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_symbolize.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_synchronization.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_throw_delegate.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_time.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_time_zone.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_type_traits.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_utf8_for_code_point.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_utility.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_variant.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_vlog_config_internal.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/debug/lib/pkgconfig/absl_vlog_is_on.pc
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/abseil_wasm32-emscripten-pthread/share/abseil/copyright
+-- Performing post-build validation
+Starting submission of abseil:wasm32-emscripten-pthread@20240722.0 to 1 binary cache(s) in the background
+Elapsed time to handle abseil:wasm32-emscripten-pthread: 7.6 min
+Installing 2/38 asio:wasm32-emscripten-pthread@1.32.0...
+asio:wasm32-emscripten-pthread@1.32.0 package ABI: 3d250b0550b1716a49402a4ec3c4ba0b3d4d4d33c7f3ba9564f2639bbd21e58d
+Building asio:wasm32-emscripten-pthread@1.32.0...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+-- Using cached chriskohlhoff-asio-asio-1-32-0.tar.gz
+-- Extracting source D:/vcpkg/downloads/chriskohlhoff-asio-asio-1-32-0.tar.gz
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/asio/src/sio-1-32-0-e4cfb7a1b9.clean
+-- Configuring wasm32-emscripten-pthread
+-- Building wasm32-emscripten-pthread-rel
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/asio_wasm32-emscripten-pthread/share/pkgconfig/asio.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/asio_wasm32-emscripten-pthread/share/asio/asio-config.cmake
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/asio_wasm32-emscripten-pthread/share/asio/copyright
+-- Performing post-build validation
+Starting submission of asio:wasm32-emscripten-pthread@1.32.0 to 1 binary cache(s) in the background
+Elapsed time to handle asio:wasm32-emscripten-pthread: 16 s
+Completed submission of abseil:wasm32-emscripten-pthread@20240722.0 to 1 binary cache(s) in 9.1 s
+Installing 3/38 bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0...
+bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0 package ABI: 21b2b931136c6afad351ee09e1f97a628f93b315939f5e1fd44dc5f7c5ece1d7
+Building bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+-- Using cached bshoshany-thread-pool-v5.1.0.tar.gz
+-- Extracting source D:/vcpkg/downloads/bshoshany-thread-pool-v5.1.0.tar.gz
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/bshoshany-thread-pool/src/v5.1.0-31ea724873.clean
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/bshoshany-thread-pool_wasm32-emscripten-pthread/include/BS_thread_pool.hpp
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/bshoshany-thread-pool_wasm32-emscripten-pthread/modules/BS.thread_pool.cppm
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/bshoshany-thread-pool_wasm32-emscripten-pthread/share/bshoshany-thread-pool/copyright
+-- Performing post-build validation
+Starting submission of bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0 to 1 binary cache(s) in the background
+Elapsed time to handle bshoshany-thread-pool:wasm32-emscripten-pthread: 1.1 s
+Installing 4/38 brotli:wasm32-emscripten-pthread@1.2.0...
+brotli:wasm32-emscripten-pthread@1.2.0 package ABI: 60127f700e8492947cd7ce2185f6ba721b0392a5641f8e79f5f40f089507b171
+Building brotli:wasm32-emscripten-pthread@1.2.0...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+-- Using cached google-brotli-v1.2.0.tar.gz
+-- Extracting source D:/vcpkg/downloads/google-brotli-v1.2.0.tar.gz
+-- Applying patch install.patch
+-- Applying patch pkgconfig.patch
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/brotli/src/v1.2.0-970ae419cf.clean
+-- Configuring wasm32-emscripten-pthread
+-- Building wasm32-emscripten-pthread-dbg
+-- Building wasm32-emscripten-pthread-rel
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/lib/pkgconfig/libbrotlienc.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/debug/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/debug/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/debug/lib/pkgconfig/libbrotlienc.pc
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/share/brotli/usage
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/brotli_wasm32-emscripten-pthread/share/brotli/copyright
+-- Performing post-build validation
+Starting submission of brotli:wasm32-emscripten-pthread@1.2.0 to 1 binary cache(s) in the background
+Elapsed time to handle brotli:wasm32-emscripten-pthread: 1.5 min
+Completed submission of asio:wasm32-emscripten-pthread@1.32.0 to 1 binary cache(s) in 1.6 s
+Completed submission of bshoshany-thread-pool:wasm32-emscripten-pthread@5.1.0 to 1 binary cache(s) in 88.2 ms
+Installing 5/38 cpp-httplib[brotli,core]:wasm32-emscripten-pthread@0.48.0...
+cpp-httplib[brotli,core]:wasm32-emscripten-pthread@0.48.0 package ABI: 504169c4466a1e7b4afd292c306b15902fe9d69f705d521ec7861e0015962bcb
+Building cpp-httplib[brotli,core]:wasm32-emscripten-pthread@0.48.0...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+-- Using cached yhirose-cpp-httplib-v0.48.0.tar.gz
+-- Extracting source D:/vcpkg/downloads/yhirose-cpp-httplib-v0.48.0.tar.gz
+-- Applying patch fix-find-brotli.patch
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/cpp-httplib/src/v0.48.0-d89dbf1ec1.clean
+-- Configuring wasm32-emscripten-pthread
+-- Building wasm32-emscripten-pthread-rel
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/cpp-httplib_wasm32-emscripten-pthread/share/cpp-httplib/copyright
+-- Installing: C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-packages/cpp-httplib_wasm32-emscripten-pthread/share/cpp-httplib/usage
+-- Performing post-build validation
+Starting submission of cpp-httplib[brotli,core]:wasm32-emscripten-pthread@0.48.0 to 1 binary cache(s) in the background
+Elapsed time to handle cpp-httplib:wasm32-emscripten-pthread: 5.2 s
+Completed submission of brotli:wasm32-emscripten-pthread@1.2.0 to 1 binary cache(s) in 1.4 s
+Installing 6/38 cppcodec:wasm32-emscripten-pthread@0.2#4...
+cppcodec:wasm32-emscripten-pthread@0.2#4 package ABI: 1f843170335415a9bd87216c5ae908490d8c48308384339ed1c53ce7281debab
+Building cppcodec:wasm32-emscripten-pthread@0.2#4...
+C:\Users\Administrador\Documents\GitHub\newstalgia\newstalgiacliente\engine\browser\triplets\wasm32-emscripten-pthread.cmake: info: loaded overlay triplet from here
+-- Using cached tplgy-cppcodec-v0.2.tar.gz
+-- Extracting source D:/vcpkg/downloads/tplgy-cppcodec-v0.2.tar.gz
+-- Applying patch 0001-Fix-62.patch
+-- Using source at C:/Users/Administrador/Documents/GitHub/newstalgia/newstalgiacliente/engine/build-emscripten-web/vcpkg-buildtrees/cppcodec/src/v0.2-290e698e71.clean
+-- Configuring wasm32-emscripten-pthread
+-- Building wasm32-emscripten-pthread-dbg
+-- Building wasm32-emscripten-pthread-rel
